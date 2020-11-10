@@ -191,31 +191,27 @@ public class RegeogSpringServlet implements Servlet {
 
     }
 
-    public boolean dynamicAddServlet(ServletContext servletContext) {
-        try {
-            ApplicationContextFacade applicationContextFacade = (ApplicationContextFacade) servletContext;
-            Field applicationContextField = applicationContextFacade.getClass().getDeclaredField("context");
-            applicationContextField.setAccessible(true);
+    public void dynamicAddServlet(ServletContext servletContext) throws Exception {
 
-            ApplicationContext applicationContext = (ApplicationContext) applicationContextField.get(applicationContextFacade);
-            Field standardContextField = applicationContext.getClass().getDeclaredField("context");
-            standardContextField.setAccessible(true);
-            StandardContext standardContext = (StandardContext) standardContextField.get(applicationContext);
+        ApplicationContextFacade applicationContextFacade = (ApplicationContextFacade) servletContext;
+        Field applicationContextField = applicationContextFacade.getClass().getDeclaredField("context");
+        applicationContextField.setAccessible(true);
 
-            Wrapper wrapper = standardContext.createWrapper();
-            wrapper.setName(path);
-            wrapper.setServletClass(this.getClass().getName());
-            wrapper.setServlet(this);
+        ApplicationContext applicationContext = (ApplicationContext) applicationContextField.get(applicationContextFacade);
+        Field standardContextField = applicationContext.getClass().getDeclaredField("context");
+        standardContextField.setAccessible(true);
+        StandardContext standardContext = (StandardContext) standardContextField.get(applicationContext);
 
-            standardContext.addChild(wrapper);
+        Wrapper wrapper = standardContext.createWrapper();
+        wrapper.setName(path);
+        standardContext.addChild(wrapper);
 
-            ServletRegistration.Dynamic registration = new ApplicationServletRegistration(wrapper, standardContext);
-            registration.addMapping(path);
-            registration.setLoadOnStartup(1);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
+        wrapper.setServletClass(this.getClass().getName());
+        wrapper.setServlet(this);
+
+        ServletRegistration.Dynamic registration = new ApplicationServletRegistration(wrapper, standardContext);
+        registration.addMapping(path);
+        registration.setLoadOnStartup(1);
     }
 
 }

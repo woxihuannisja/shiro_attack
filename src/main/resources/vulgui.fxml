@@ -137,7 +137,7 @@
                               </FXCollections>
                            </items>
                         </ChoiceBox>
-                        <TextField fx:id="injectpath" layoutX="429.0" layoutY="205.0" prefHeight="30.0" prefWidth="228.0" text="/favicon.ico" />
+                        <TextField fx:id="injectpath" layoutX="429.0" layoutY="205.0" prefHeight="30.0" prefWidth="228.0" text="/favicondemo.ico" />
                         <Label layoutX="377.0" layoutY="208.0" prefHeight="24.0" prefWidth="44.0" text="路径">
                            <font>
                               <Font size="18.0" />
