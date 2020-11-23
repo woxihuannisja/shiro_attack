@@ -1,8 +1,13 @@
 package vulgui.utils;
 
+import javax.net.ssl.*;
 import java.io.*;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -28,13 +33,15 @@ public class HttpUtil {
         POST, DELETE, GET, PUT, HEAD;
     }
 
-    ;
-
-    public static Map<String, List<String>> getRespHeader(HttpURLConnection conn){
-        return  conn.getHeaderFields();
+    static {
+        HttpUtil.disableSSLCertificateChecking();
     }
 
-    public static String getBody(HttpURLConnection conn, String encoding){
+    public static Map<String, List<String>> getRespHeader(HttpURLConnection conn) {
+        return conn.getHeaderFields();
+    }
+
+    public static String getBody(HttpURLConnection conn, String encoding) {
         //接收返回结果
         StringBuilder result = new StringBuilder();
         BufferedReader in = null;
@@ -75,6 +82,38 @@ public class HttpUtil {
         }
     }
 
+    // https://gist.github.com/aembleton/889392
+    private static void disableSSLCertificateChecking() {
+        TrustManager[] trustAllCerts = new TrustManager[]{new X509TrustManager() {
+            @Override
+            public X509Certificate[] getAcceptedIssuers() {
+                return null;
+            }
+
+            @Override
+            public void checkClientTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
+                // Not implemented
+            }
+
+            @Override
+            public void checkServerTrusted(X509Certificate[] arg0, String arg1) throws CertificateException {
+                // Not implemented
+            }
+        }};
+
+        try {
+            SSLContext sc = SSLContext.getInstance("TLS");
+
+            sc.init(null, trustAllCerts, new java.security.SecureRandom());
+
+            HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+        } catch (KeyManagementException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+    }
+
     private static HttpURLConnection invokeUrl(String url, Map params, Map<String, String> headers, int connectTimeout, int readTimeout, String encoding, HttpMethod method) {
         headers.put("User-agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36");
         //构造请求参数字符串
@@ -104,7 +143,7 @@ public class HttpUtil {
             //创建和初始化连接
             uUrl = new URL(url);
             conn = (HttpURLConnection) uUrl.openConnection();
-            conn.setRequestProperty("content-type", "application/x-www-form-urlencoded");
+            // conn.setRequestProperty("content-type", "application/x-www-form-urlencoded");
             conn.setRequestMethod(method.toString());
             conn.setInstanceFollowRedirects(false);
             conn.setDoOutput(true);

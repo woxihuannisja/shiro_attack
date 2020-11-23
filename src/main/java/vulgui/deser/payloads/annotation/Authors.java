@@ -11,7 +11,8 @@ import java.lang.reflect.AnnotatedElement;
 public @interface Authors {
     String FROHOFF = "frohoff";
     String KORLR = "KORLR";
-
+    String MATTHIASKAISER = "MATTHIASKAISER";
+    String GEBL = "GEBL";
 
     String[] value() default {};
 

@@ -1,6 +1,27 @@
 package vulgui;
 
+import com.arronlong.httpclientutil.HttpClientUtil;
+import com.arronlong.httpclientutil.common.HttpConfig;
+import com.arronlong.httpclientutil.common.HttpHeader;
+import com.arronlong.httpclientutil.common.HttpResult;
 import org.apache.commons.lang.StringUtils;
+import org.apache.http.Header;
+import org.apache.http.HttpEntity;
+import org.apache.http.NameValuePair;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.entity.UrlEncodedFormEntity;
+import org.apache.http.client.methods.CloseableHttpResponse;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.config.Registry;
+import org.apache.http.config.RegistryBuilder;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
+import org.apache.http.conn.socket.PlainConnectionSocketFactory;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
+import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
+import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.util.EntityUtils;
 import vulgui.deser.frame.FramePayload;
 import vulgui.deser.plugins.servlet.MemBytes;
 import vulgui.deser.util.Gadgets;
@@ -14,8 +35,14 @@ import javafx.scene.control.*;
 import javafx.event.ActionEvent;
 import javafx.scene.input.MouseEvent;
 
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 import java.io.*;
 import java.net.URL;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
 import java.sql.SQLException;
 import java.util.*;
 
@@ -270,7 +297,7 @@ public class VulController {
                 resultoutput.appendText("-------------------------------\n");
                 resultoutput.appendText(commandResult);
                 resultoutput.appendText("-------------------------------\n");
-            }else{
+            } else {
                 resultoutput.appendText("-------------------------------\n");
                 resultoutput.appendText("[x] 该命令执行失败请重试\n");
                 resultoutput.appendText("-------------------------------\n");
@@ -380,7 +407,7 @@ public class VulController {
 
         String result = DserUtil.execInject(target, rememberMe, b64Bytecode, injectPath, injectPass, TimeOut(httptimeout));
 
-        if (result !=null && result.contains("dynamic inject success")) {
+        if (result != null && result.contains("dynamic inject success")) {
             URL url = new URL(target);
             int port;
             if (url.getPort() == -1) {

