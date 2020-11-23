@@ -16,6 +16,8 @@
 ## bug修复
 2020.11.08
 1. 高低版本base64库不一致,目前使用org.apache.shiro.codec.Base64避免此问题
+2020.11.23
+1. 忽略https证书错误
 
 ![](screenshot/screenshot.png)
 
