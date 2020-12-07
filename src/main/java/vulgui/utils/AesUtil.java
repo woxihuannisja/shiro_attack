@@ -7,10 +7,7 @@ import javax.xml.bind.DatatypeConverter;
 import java.security.SecureRandom;
 
 public class AesUtil {
-    public static byte[] encrypt(byte[] plainText, String key) throws Exception {
-        // base64 decode key
-        byte[] bkeys = DatatypeConverter.parseBase64Binary(key);
-
+    public static byte[] encrypt(byte[] plainText, byte[] key) throws Exception {
         // Generating IV.
         int ivSize = 16;
         byte[] iv = new byte[ivSize];
@@ -19,7 +16,7 @@ public class AesUtil {
         IvParameterSpec ivParameterSpec = new IvParameterSpec(iv);
 
         // init key.
-        SecretKeySpec secretKeySpec = new SecretKeySpec(bkeys, "AES");
+        SecretKeySpec secretKeySpec = new SecretKeySpec(key, "AES");
 
         // Encrypt.
         Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");

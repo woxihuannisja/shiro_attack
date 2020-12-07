@@ -35,6 +35,7 @@ public class DserUtil {
     public static Object principal = null;
     public static ObjectPayload<?> gadgetpayload = null;
     public static FramePayload<?> genpayload = null;
+    public static Integer aesCipherType = 0;
 
     static {
         principal = KeyEcho.getObject();

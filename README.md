@@ -2,7 +2,7 @@
 
 项目基于javafx,利用shiro反序列化漏洞进行回显命令执行以及注入各类内存马
 
-1. 检出默认key (SimplePrincipalCollection)
+1. 检出默认key (SimplePrincipalCollection) cbc/gcm
 2. Tomcat/Springboot 回显命令执行
 3. 集成CommonsCollectionsK1/K2
 4. 通过POST请求中defineClass字节码实现注入内存马（Servlet实现参考哥斯拉内存马）
@@ -21,7 +21,11 @@
 1. 修复注入内存马都显示注入成功的错误。
 
 2020.11.23
-1. 忽略https证书错误
+1. 忽略https证书错误。
+
+2020.12.07
+1. 添加AES GCM加密方式。
+2. 修复内存马默认使用jdk1.8编译导致jdk版本不一致注入失败。
 
 ![](screenshot/screenshot.png)
 
