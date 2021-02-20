@@ -82,15 +82,6 @@
     <orderEntry type="library" name="Maven: javax.enterprise:cdi-api:1.0-SP1" level="project" />
     <orderEntry type="library" name="Maven: org.jboss.interceptor:jboss-interceptor-api:1.1" level="project" />
     <orderEntry type="library" name="Maven: javax.inject:javax.inject:1" level="project" />
-    <orderEntry type="module-library">
-      <library name="Maven: com.weblogic:com.liferay.registry.api:1.0">
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/lib/weblogic.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
     <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
     <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
   </component>

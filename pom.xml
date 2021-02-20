@@ -206,13 +206,13 @@
             <version>1.0-SP1</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.weblogic</groupId>
-            <artifactId>com.liferay.registry.api</artifactId>
-            <version>1.0</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/lib/weblogic.jar</systemPath>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>com.weblogic</groupId>-->
+<!--            <artifactId>com.liferay.registry.api</artifactId>-->
+<!--            <version>1.0</version>-->
+<!--            <scope>system</scope>-->
+<!--            <systemPath>${project.basedir}/lib/weblogic.jar</systemPath>-->
+<!--        </dependency>-->
       <dependency>
         <groupId>junit</groupId>
         <artifactId>junit</artifactId>
