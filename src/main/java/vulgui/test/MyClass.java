@@ -29,8 +29,8 @@ public class MyClass {
   }
 
   public static void main(String args[]) throws Exception {
-    String dest="SimpleFilter-urlencode.txt";
-    byte[] data = ClassFiles.classAsBytes(x.SimpleFilter.class);
+    String dest="MyBehindServlet-urlencode.txt";
+    byte[] data = ClassFiles.classAsBytes(x.MyBehindServlet.class);
     String b64Data = org.apache.shiro.codec.Base64.encodeToString(data);
     String urlData=URLEncoder.encode(b64Data,"UTF-8");
     // BufferedWriter out = new BufferedWriter(new FileWriter("BehOldDemoServlet.txt"));

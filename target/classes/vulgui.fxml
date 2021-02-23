@@ -151,7 +151,8 @@
                                             <String fx:value="regeorg_Tomcat"/>
                                             <String fx:value="regeorg_Spring"/>
                                             <String fx:value="filter_cmd"/>
-                                            <String fx:value="冰蝎2_Tomcat_filter"/>
+                                            <String fx:value="behind_servlet_tomcat"/>
+                                            <String fx:value="behind_filter_tomcat"/>
                                         </FXCollections>
                                     </items>
                                 </ChoiceBox>
